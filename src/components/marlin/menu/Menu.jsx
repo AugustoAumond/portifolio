@@ -6,8 +6,8 @@ function Menu () {
     return (
     <Options id='options'>      
         <div id='imgtext'> 
-            <img id='norte' src='img/marlin/norte_sul.png'/>
-            <img id='porto' src='img/marlin/porto_seguro.png' />
+            <img id='norte' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/norte_sul.png`}/>
+            <img id='porto' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/porto_seguro.png`} />
             <FaBars id='bars'/>
             <div id='sobre'><p id="txtmarlin">Sobre</p></div>
             <div id='hospitais'> <p id="txtmarlin">Hospitais </p></div>

@@ -7,7 +7,7 @@ function Contact (){
     return (
         <Div>
             <Img>
-                <img src="img/utilizar2.jpg" alt="" />
+                <img src={`${process.env.PUBLIC_URL}/img/utilizar2.jpg`} alt="" />
             </Img>
             <Network>
                 <a href="https://www.instagram.com/augusto_aumond/"><BsInstagram id='insta'/></a> 

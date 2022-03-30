@@ -13,7 +13,7 @@ export const projects = [
             <li>Validação do recaptcha</li>
             <li>Respansividade para disposítivos mobile</li>
         </ul>,
-        photo: 'img/marlin/painel.png'
+        photo: `${process.env.PUBLIC_URL}/img/marlin/painel.png`
     },
     {
         name: 'Tiki',
@@ -26,7 +26,7 @@ export const projects = [
             <li>Validação e armazenamento das infos nos inputs</li>
             <li>Função onFocus para alteração de estilo </li>
         </ul>, 
-        photo: 'img/tiki/imagem.jpg'
+        photo: `${process.env.PUBLIC_URL}/img/tiki/imagem.jpg`
     },
     {
         name: 'Codificar',
@@ -38,7 +38,7 @@ export const projects = [
             <li>Validação dos inputs</li>
             <li>Trabalhando com checkbos para mudança de estilos</li>
         </ul>,
-        photo: 'img/codificar/cod_painel.png'
+        photo: `${process.env.PUBLIC_URL}/img/codificar/cod_painel.png`
     }
 ]
   

@@ -10,7 +10,7 @@ function Header () {
     return (
       <Head>  
         <Menu/>
-          {mobile ? <img src="img/marlin/Grupo309.png" /> : <img src="img/marlin/painel.png"/>} 
+        {mobile ? <img alt='' src={`${process.env.PUBLIC_URL}/img/marlin/Grupo309.png`} /> : <img alt='' src={`${process.env.PUBLIC_URL}/img/marlin/painel.png`}/>}
           <p id='text'>Conforto e qualidade para levar bem-estar com alto padrão de atendimento a seus funcionários.</p>
           <div id="line"></div>            
           <p id='goldplan'>Conheça o plano Ouro da Porto Seguro Saúde.</p>

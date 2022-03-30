@@ -39,7 +39,7 @@ function KnowMore(props) {
         <Know>
             <h2 id="text"> Quer saber mais? </h2>
             <div id='line'></div>
-            <img id='call' src="img/marlin/phone-call.png" />
+            <img id='call' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/phone-call.png`}/>
             <p id='textcall'> Ainda sobrou alguma dúvida sobre qual o melhor Plano para sua empresa? Envie seus dados e deixe que a NS Benefícios entrará em contato assim que possível. </p>
             <p id='namemarlin'> <strong>NOME:</strong> </p>
             <input id='inputname' placeholder='Insira aqui seu nome' onChange={((e)=> setName(e.currentTarget.value))} value={name} />

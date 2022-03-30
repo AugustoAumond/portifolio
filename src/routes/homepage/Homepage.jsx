@@ -11,7 +11,7 @@ function Homepage(){
 
   return (  
     <BodyBox id="bodybox">
-      <img id="background" src="img/background2.jpg" alt="" />
+      <img id="background" src={`${process.env.PUBLIC_URL}/img/background2.jpg`} alt="" />
       <Contact/>
       <Projects/>      
     </BodyBox>
