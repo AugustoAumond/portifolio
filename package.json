@@ -1,6 +1,7 @@
 {
   "name": "portifolio",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@coldsnap/react": "^3.0.0-beta.6",
