@@ -1,7 +1,7 @@
 {
   "name": "portifolio",
   "version": "0.1.0",
-  "homepage": "./",
+  "homepage": "https://augustoaumond.github.io/site_poritfolio/",
   "private": true,
   "dependencies": {
     "@coldsnap/react": "^3.0.0-beta.6",

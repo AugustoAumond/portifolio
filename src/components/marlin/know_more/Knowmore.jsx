@@ -337,7 +337,6 @@ const Know = styled.div`
         }
     }
     
-
     #number{
         position: relative;
         top: -550px;

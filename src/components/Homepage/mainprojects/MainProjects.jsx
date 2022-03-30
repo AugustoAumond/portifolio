@@ -29,12 +29,10 @@ function MainProjects(){
         <RouteProject onClick={(()=>{routes()})}>
             <img src={projects[index].photo} alt="" /></RouteProject>   
             <Description>
-                <p>
-                    Ferramentas: 
+                    <p>Ferramentas: </p> 
                     <strong>
                         {projects[index].discription}
                     </strong>
-                </p>
             </Description>    
         </Project>
             <DivRight index={index}>
@@ -104,8 +102,9 @@ text-align: justify;
         display: flex;
     }
 
-    p{  color:black;
+    p{  color: black;
         position: absolute;
+        top: -6px;
     }
 
     strong{
