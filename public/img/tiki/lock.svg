@@ -1,0 +1,10 @@
+<svg id="lock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.638" height="24" viewBox="0 0 17.638 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_8" data-name="Retângulo 8" width="17.638" height="24" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_3" data-name="Grupo 3" clip-path="url(#clip-path)">
+    <path id="Caminho_2" data-name="Caminho 2" d="M0,21.505V11.622A2.5,2.5,0,0,1,2.495,9.127h.054V5.493A5.5,5.5,0,0,1,8.041,0H9.6a5.5,5.5,0,0,1,5.495,5.493V9.127h.054a2.5,2.5,0,0,1,2.493,2.495v9.884A2.5,2.5,0,0,1,15.145,24H2.495A2.5,2.5,0,0,1,0,21.505m9.772-2.183V17.259a1.759,1.759,0,0,0,.312-.249,1.788,1.788,0,1,0-2.528,0,1.759,1.759,0,0,0,.312.249v2.063a.869.869,0,0,0,.87.869H8.9a.868.868,0,0,0,.869-.869m3.241-10.2V5.751A3.673,3.673,0,0,0,9.34,2.079H8.3A3.673,3.673,0,0,0,4.627,5.751V9.127Z" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>

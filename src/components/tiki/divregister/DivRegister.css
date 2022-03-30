@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+#box{
+    background: #26093A;
+    position: absolute;
+    top: 2380px;
+    left: 988px;
+    width: 550px;
+    height: 595px;
+    border-radius: 80px;
+}
+
+    #txt{
+        font-size: 18px;
+        color: white;
+        position: absolute;
+        top: 67px;
+        width: 357px;
+        text-align: center;
+        left: 93px;
+        font-weight: bold;
+        font-family: 'Open-sans', sans-serif;
+    }
+
+    #name{
+        border-radius: 40px;
+        border: 1px solid white;
+        position: absolute;
+        width: 417px;
+        height: 44px;
+        padding: 15px;
+        background: #26093A;
+        top: 177px;
+        left: 45px;
+        font-size: 14px;
+    }
+
+    #name:focus {
+        background: #26093A;
+        border: solid 1px #FC2BEE;
+        color: #FC2BEE;    
+    }
+
+
+    #emailtiki{
+        background: #26093A;
+        border-radius: 40px;
+        border: 1px solid white;
+        position: absolute;
+        width: 416px;
+        height: 44px;
+        padding: 15px;
+        background: #26093A;
+        top: 267px;
+        left: 45px;
+        font-size: 14px;
+    }
+
+    #emailtiki:focus {
+        background: #26093A;
+        border: solid 1px #FC2BEE;
+        color: #FC2BEE;    
+    }
+
+    input[type=radio]:checked + label:before {
+        color: #FC2BEE;
+        border-radius: 50px;
+        content: "\2022";
+        position: absolute;
+        top: 381px;
+        left: 54px;
+        width: 16px;
+        height: 15px;
+        background: #FC2BEE;
+    }
+
+    #radio{
+        position: absolute;
+        top: 362px;
+        left: 36px;
+        width: 24px;
+        height: 24px;
+    }
+
+    #check{
+        color: white;
+        position: absolute;
+        top: 355px;
+        left: 72px;
+        font-size: 12px;
+        font-family: 'Open-sans', sans-serif;
+    }
+
+    #enviar{
+        color: white;
+        position: absolute;
+        top: 419px;
+        left: 51px;
+        width: 440px;
+        height: 76px;
+        border-radius: 50px;
+        box-shadow: 3px 5px 0px #fc2bee;
+    }
+
+    #button {
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        cursor: pointer;
+        position: absolute;
+        top: 1px;
+        left: 168px;
+    }

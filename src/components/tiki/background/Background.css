@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+#background {       
+    position: relative;
+    top: 22px;
+    left: 272px;
+    width: 1920px;
+    height: 3302px;
+    background-image: url(./Background.jpg);
+}
+
+#logo-tiki {
+    position: absolute;
+    top: 126px;
+    left: 1039px;
+}
+
+#tittle2{
+    position: absolute;
+    top: 2067px;
+    left: 909px;
+}
+
+#icon-yellow-bottom{
+    position: absolute;
+    height: 31px;
+    width: 26px;
+    color: #fb0;
+    left: 1230px;
+    top: 2190px;
+}
+
+#icon-yellow2-bottom{
+    position: absolute;
+    height: 31px;
+    width: 26px;
+    color: #ffbb0060;
+    left: 1230px;
+    top: 2220px;
+}
+
+#icon-yellow3-bottom{
+    position: absolute;
+    height: 31px;
+    width: 26px;
+    color: #ffbb0025;
+    left: 1230px;
+    top: 2250px;
+}
+
+#titlefinal {
+    width: 158px;
+    position: absolute;
+    top: 3073px;
+    left: 1189px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Open-Sans',sans-serif;
+}
+
+#finaltext{
+    position: absolute;
+    text-align: center;
+    top: 3117px;
+    left: 710px;
+    width: 1107px;
+    font-size: 10px;
+    color: white;
+    font-family: 'Open Sans';
+}
+
+#finaltext2{
+    position: absolute;
+    text-align: center;
+    top: 3172px;
+    left: 710px;
+    width: 1107px;
+    font-size: 10px;
+    color: white;
+    font-family: 'Open Sans';
+}
