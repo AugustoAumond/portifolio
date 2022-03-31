@@ -153,4 +153,5 @@ align-items: center;
 border: 2px solid black;
 box-shadow: 2px 2px 4px 2px black;
 justify-content: center;
+cursor: pointer;
 `

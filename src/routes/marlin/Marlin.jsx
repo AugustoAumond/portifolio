@@ -9,8 +9,6 @@ import KnowMore from './../../components/marlin/know_more/Knowmore';
 
 import axios from 'axios';
 
-const user = `${process.env.PUBLIC_URL}/imagens/Usuario.png`
-
 function Marlin(){ 
   const [data, setData] = useState([]);
 
@@ -20,8 +18,9 @@ function Marlin(){
     history.push('/');
   }
 
-  useEffect (async () => {
-      await axios.get(`https://5cf9ae9df26e8c00146cff8d.mockapi.io/api/v1/hospital`)
+    useEffect(() => {
+      async function fetchData() {
+        await axios.get(`https://5cf9ae9df26e8c00146cff8d.mockapi.io/api/v1/hospital`)
       .then((e) => {
       
         setData(e.data)
@@ -30,7 +29,9 @@ function Marlin(){
       .catch((e) => {
           setData([])
       })
-    }, [])
+    }
+      fetchData();
+    }, []);
 
   return ( 
     <DivBody>

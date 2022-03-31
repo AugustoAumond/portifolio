@@ -180,6 +180,3 @@ const Options = styled.div`
         }
     }
 `
-
-const IconBars = styled.div`
-`

@@ -15,8 +15,8 @@ function DivEvents () {
 
     //Objeto para usar o mover over e out;
     const events = [
-        {id:1, foto: 'img/tiki/imagem.jpg', date: '16 DE MARÇO' },
-        {id: 2, foto: 'img/tiki/imagem2.jpg', date:'17 DE MARÇO'},
+        {id:1, foto: `${process.env.PUBLIC_URL}/img/tiki/imagem.jpg`, date: '16 DE MARÇO' },
+        {id: 2, foto: `${process.env.PUBLIC_URL}/img/tiki/imagem2.jpg`, date:'17 DE MARÇO'},
         {id: 3, foto: '', date:'18 DE MARÇO'},
         {id: 4, foto: '', date:'19 DE MARÇO'},
         {id: 5, foto: '', date:'20 DE MARÇO'},
@@ -149,7 +149,7 @@ function DivEvents () {
 
             <p id='knowingtxt'> VOCÊ JÁ ESTAVA SABENDO?</p>
             <div id='divcity'>
-            <img id='city' src='img/tiki/imagem.jpg' onMouseOver={(()=>OpenDiv())} onMouseOut={(()=>CloseDiv())}/>
+            <img id='city' alt='' src={`${process.env.PUBLIC_URL}/img/tiki/imagem.jpg`} onMouseOver={(()=>OpenDiv())} onMouseOut={(()=>CloseDiv())}/>
             </div>
             <div id='sharer'>
                 <p id='sharertxt'>Espalhe esse SPOILER:</p>

@@ -21,7 +21,7 @@ function Questions(){
           try {
             const request = await axios.get(`https://opentdb.com/api.php?amount=${number}`);
             let processedData = request.data.results;
-            processedData.map((e, index) => {
+            processedData.forEach((e, index) => {
                 if (e.correct_answer || e.incorrect_answers){
                     let answers = [ ];
         
@@ -47,7 +47,7 @@ function Questions(){
         };
     
         loadData();
-      }, []);
+      }, [number]);
 
     //Validando as questões enquanto não carrega os dados importados api;
     if (questions.length === 0){

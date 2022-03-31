@@ -40,7 +40,7 @@ function Hospitais (props) {
            
             {hospitaisEmDestaque.map((list, index)=>(
                 <Photos id={`photos${index}`} key={index} open={open}>
-                    <img id={`hosp${index}`} open={open} src={list.foto}></img>  
+                    <img alt='' id={`hosp${index}`} open={open} src={list.foto}></img>  
                     <p id={`text${index}`} open={open}> {list.name} <br /> <IconArrown index={index} icon={open ? faAngleDown : faAngleUp} onClick={(()=> openWindow())} /></p> 
             {(threeHospitals(props.list)[0] === undefined || list.name !== 'Hospital Vitória Barra') ? 
                 <Api></Api> : 
@@ -49,7 +49,7 @@ function Hospitais (props) {
                 {threeHospitals(props.list).map((list, index)=>(    
                     <div id={`colunm${index}`}  key={index} >
                         <div id='open' >
-                            <img id={`image${index}`} src={list.image} open={open}/>
+                            <img alt='' id={`image${index}`} src={list.image} open={open}/>
                             <h2 id='namehospitals'> {(list.name !== undefined) ? list.name : 'Carregando...'} </h2>
                             <div id='detail'><p id='detailtxt'>{list.detail}</p></div>
                         </div>
@@ -155,7 +155,7 @@ const IconArrown = styled(FontAwesomeIcon)`
     color: gray;
 
     @media(max-width: 666px){
-        display: ${props => (props.index == 0) ? '' : 'none'}
+        display: ${props => (props.index === 0) ? '' : 'none'}
     }
 `
 

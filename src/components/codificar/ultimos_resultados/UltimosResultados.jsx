@@ -12,39 +12,29 @@ function UltimosResultados(props){
         history.push('/start')}; 
 
     
-    //Abrindo o histório quando voltar para a tela de entrada;
+    //Pegar o historico atual, o histórico completo, e tratar os dados setando na tela o histórico;
     useEffect (()=>{
-        
-       addHistoric();
-
-    }, [])
-    
-
-     //Pegar o historico atual, o histórico completo, e tratar os dados setando na tela o histórico;
-     const addHistoric = () => {
         const currentHistoric = JSON.parse(localStorage.getItem('currenthistoric'));
         let Allhistoric = JSON.parse(localStorage.getItem('historic'));
-        if (Allhistoric !== undefined && currentHistoric === null) {
-            Allhistoric = Allhistoric;        
-        }
-        else {
-            if (Allhistoric === null){
+        if (!(Allhistoric !== undefined && currentHistoric === null)) {
+             if (Allhistoric === null){
                 Allhistoric = [currentHistoric];
                 localStorage.setItem('historic', JSON.stringify(Allhistoric));
             }else {
                 Allhistoric.push(currentHistoric);
                 JSON.stringify(localStorage.setItem('historic', JSON.stringify(Allhistoric)));
-            }
-        }
+            }   
+        } 
         setHistoric(JSON.parse(localStorage.getItem('historic')));
         localStorage.removeItem('currenthistoric');
-        Div(historic);
-     }
+        Div(historic);    
+    }, [])
+    
 
     // Função para remover algum histórico;
     const onRemove = (hist) => {
         let newHistoric = hist;
-        newHistoric.map((e, index)=>{
+        newHistoric.forEach((e, index)=>{
             if (value===index){
                 newHistoric.splice(index, 1);         
                 if (newHistoric[0] === undefined){

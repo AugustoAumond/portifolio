@@ -2,13 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import {useHistory} from 'react-router-dom';
 
-
 import BackgroundandTitles from './../../components/tiki/background/Background';
 import DivEvents from './../../components/tiki/divevents/DivEvents';
 import Register from './../../components/tiki/divregister/DivRegister';
 
-
-const user = `${process.env.PUBLIC_URL}/imagens/Usuario.png`
 
 function Tiki() {
 
