@@ -4,7 +4,6 @@ import './../../Styles/GlobalStyles.css';
 import Contact from '../../components/Homepage/contact/Contact';
 import Projects from "../../components/Homepage/mainprojects/MainProjects";
 
-const user = `${process.env.PUBLIC_URL}/imagens/Usuario.png`
 
 function Homepage(){  
 
