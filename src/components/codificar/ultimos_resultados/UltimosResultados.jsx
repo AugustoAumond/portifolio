@@ -26,12 +26,11 @@ function UltimosResultados(props){
             }   
         } 
         setHistoric(JSON.parse(localStorage.getItem('historic')));
-        localStorage.removeItem('currenthistoric');
-        Div(historic);    
+        localStorage.removeItem('currenthistoric');   
     }, [])
     
 
-    // Função para remover algum histórico;
+    //Função para remover algum histórico;
     const onRemove = (hist) => {
         let newHistoric = hist;
         newHistoric.forEach((e, index)=>{
@@ -55,28 +54,15 @@ function UltimosResultados(props){
 
 
     // Mostrando na tela o histórico;
-    function Div (historic){
+    /*function Div (historic){
          if (historic !== null){
             return (
-                <Fragment >
-                    {historic.map((event, index) => (
-                    <DivHistoric key={index}>
-                        <DivCheck type='radio' name={'check'} value={index} onChange={(e)=> setValue(index)} checked={value===index}/>
-                        <Comment>
-                            {Comments(event.number, event.hit)}
-                        </Comment>
-                        <HistoricDatas>
-                            {event.hit} / {event.number}
-                        </HistoricDatas>     
-                    </DivHistoric> 
-                    ))}
-                    <Remove id="remove"  onClick={(()=> onRemove(historic))}> Remover </Remove>
-                </Fragment>       
+              
             )
         } 
         else 
-         return <NoResult> <h2>Não há histórico disponível no momento</h2> </NoResult>
-    }
+         return 
+    }*/
 
     //Comentário central baseado nos acertos do usuário;
     function Comments(number, hit){
@@ -94,7 +80,26 @@ function UltimosResultados(props){
         }
                 
     }
-    return (Div(historic))
+
+    return (
+        <Fragment >
+        {historic !== null ?
+            historic.map((event, index) => (
+            <DivHistoric key={index}>
+                <DivCheck type='radio' name={'check'} value={index} onChange={(e)=> setValue(index)} checked={value===index}/>
+                <Comment>
+                    {Comments(event.number, event.hit)}
+                </Comment>
+                <HistoricDatas>
+                    {event.hit} / {event.number}
+                </HistoricDatas>     
+            </DivHistoric> 
+            ))
+             : 
+            <NoResult> <h2>Não há histórico disponível no momento</h2> </NoResult>} 
+            <Remove id="remove"  onClick={(()=> onRemove(historic))}> Remover </Remove>
+        </Fragment>       
+    )
 }
     
 export default UltimosResultados;
