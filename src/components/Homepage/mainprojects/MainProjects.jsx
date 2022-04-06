@@ -53,7 +53,7 @@ height: 776px;
 width: 650px;
 position: absolute;
 top: 52px;
-left: 600px;
+left: 720px;
 background: ${props => props.index === 0 ? '#3b3838d4': (props.index === 1 ? '#26093ac7' : '#294232b8')};
 
 `

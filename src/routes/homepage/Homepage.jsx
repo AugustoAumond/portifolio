@@ -25,7 +25,7 @@ const BodyBox = styled.div`
     left: -55px;
     top: -23px;
     height: 910px;
-    width: 1330px;
+    width: 1470px;
   }
 `
 
