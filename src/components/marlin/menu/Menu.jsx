@@ -5,16 +5,20 @@ import { FaBars } from 'react-icons/fa';
 function Menu () {
     return (
     <Options id='options'>      
-        <div id='imgtext'> 
+        <div id='divNort'>
             <img id='norte' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/norte_sul.png`}/>
             <img id='porto' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/porto_seguro.png`} />
-            <FaBars id='bars'/>
-            <div id='sobre'><p id="txtmarlin">Sobre</p></div>
-            <div id='hospitais'> <p id="txtmarlin">Hospitais </p></div>
-            <div id='beneficios'> <p id="menu">Beneficios</p></div>
-            <div id='servicos'><p id="menu">Serviços Especiais</p></div>
-            <div id='contato'><p id="menu">Contato</p></div>
-        </div>  
+        </div> 
+
+        <FaBars id='bars'/>
+      
+        <ul class='list'>     
+            <li ><p id="txtmarlin">Sobre</p></li>
+            <li > <p id="txtmarlin">Hospitais </p></li>
+            <li > <p id="menu">Beneficios</p></li>
+            <li ><p id="menu">Serviços Especiais</p></li>
+            <li ><p id="menu">Contato</p></li>
+        </ul>
     </Options>
     )
 }
@@ -23,10 +27,14 @@ export default Menu;
 
 const Options = styled.div`
     position: fixed;
+    display: flex;
     z-index: 2;
     background: white;
     height: 94px;
-    width: 1380px;
+    width: 100%;
+    max-width: 1450px;
+    justify-content: space-between;
+    align-itens: center;
 
     @media(max-width: 666px){  
         position: absolute;
@@ -34,19 +42,21 @@ const Options = styled.div`
         height: 61px;
     }
 
-    #norte{
+    divNort {
+        display: flex;
+        margin-left: 20px;
+
+        #norte{
         position: absolute;
         background: white;
         top: 24px;
-        left: 50px;
         width: 60px;
         height: 43px;
         background: transparent url('img/marlin/logo-Norte-a-Sul.png') 0% 0% no-repeat padding-box;
         opacity: 1;
 
         @media(max-width: 666px){
-            top: 14px;
-            left: 21px;
+            top: 14px;       
             width: 42px;
             height: 30px;
         }
@@ -56,17 +66,19 @@ const Options = styled.div`
         position: absolute;
         background: white;
         top: 30px;
-        left: 165px;
+       
         width: 98px;
         height: 31px;
 
         @media(max-width: 666px){
             top: 18px;
-            left: 103px;
+  
             width: 73px;
             height: 23px;
         }
     }
+ }
+    
 
     #bars{
         display: none;
@@ -74,22 +86,44 @@ const Options = styled.div`
         @media(max-width: 666px){
             display: flex;
             position: absolute;
-            left: 319px;
             width: 35px;
-            top: 4px;
+            top: 20px;
             height: 45px;
             color: #000000;
+            right: 1%;
         }
     }
+
+    .list {
+        position: absolute;
+        display: flex;
+        list-style: none;
+        right: 50px;
+        width: 100%;
+        justify-content: flex-end;
+}
+
+
+
+        li{
+            margin-left: 10px;
+            right: 150px;
+        }
+    }
+
 
     #sobre {
         display: flex;
         align-items: center;
         position: absolute;
         top: 32px;
-        left: 732px;
+       
         width: 56px;
         height: 27px;
+
+        @media(max-width: 1200px){
+            font-size: 12px;
+        }
 
         @media(max-width: 666px){
             display: none;
@@ -100,11 +134,15 @@ const Options = styled.div`
         position: absolute;
         display: flex;
         align-items: center;
-        margin-left: 10px;
+      
         top: 32px;
-        left: 812px;
+     
         width: 90px;
         height: 27px;
+
+        @media(max-width: 1200px){
+            font-size: 12px;
+        }
 
         @media(max-width: 666px){
             display: none;
@@ -115,11 +153,15 @@ const Options = styled.div`
         position: absolute;
         display: flex;
         align-items: center;
-        margin-left: 10px;
+  
         top: 32px;
-        left: 926px;
+  
         width: 100px;
         height: 27px;
+
+        @media(max-width: 1200px){
+            font-size: 12px;
+        }
 
         @media(max-width: 666px){
             display: none;
@@ -130,11 +172,15 @@ const Options = styled.div`
         position: absolute;
         display: flex;
         align-items: center;
-        margin-left: 10px;
+       
         top: 32px;
-        left: 1050px;
+      
         width: 220px;
         height: 27px;
+
+        @media(max-width: 1200px){
+            font-size: 12px;
+        }
 
         @media(max-width: 666px){
             display: none;
@@ -145,11 +191,15 @@ const Options = styled.div`
         display: flex;
         align-items: center;
         position: absolute;
-        margin-left: 20px;
+       
         top: 32px;
-        left: 1246px;
+       
         width: 78px;
         height: 27px;
+
+        @media(max-width: 1200px){
+            font-size: 12px;
+        }
 
         @media(max-width: 666px){
             display: none;
@@ -163,6 +213,10 @@ const Options = styled.div`
         color: #D6A430;
         opacity: 1;
 
+        @media(max-width: 1200px){
+            font-size: 14px;
+        }
+
         @media(max-width: 666px) {
             display: none;
         }
@@ -175,8 +229,13 @@ const Options = styled.div`
         color: #D6A430;
         opacity: 1; 
 
+        @media(max-width: 1200px){
+            font-size: 14px;
+        }
+
         @media(max-width: 666px) {
             display: none;
-        }
+        }    
     }
+
 `

@@ -77,6 +77,8 @@ export default Hospitais;
 const Hospitals = styled.div`
 position: relative;
 height: 1135px;
+width: 100%;
+top: 150px;
 
     @media(max-width: 666px){
         position: relative;

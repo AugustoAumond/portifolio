@@ -29,6 +29,18 @@ export const projects = [
         photo: `${process.env.PUBLIC_URL}/img/tiki/imagem.jpg`
     },
     {
+        name: 'Nerdweb',
+        type:'Criação de página web',
+        discription: 
+        <ul>
+            <li>Sobreposição de texto e imagem</li>
+            <li>Responsividade (1920px, 1024px, 666px)</li>
+            <li>Armazenamento dos dados no localStorage</li>
+            <li>Validação dos inputs</li>
+        </ul>,
+        photo: `${process.env.PUBLIC_URL}/img/nerdweb/banner.png`
+    },
+    {
         name: 'Codificar',
         type:'Jogo de perguntas e respostas',
         discription: 

@@ -69,12 +69,12 @@ export default KnowMore;
 const Know = styled.div`
     position: relative;
     top: 1px;
-    width: 1366px;
-    top: -532px;
+    width: 100%;
+    top: -400px;
 
     @media(max-width: 666px){
         width: 380px;
-        top: -35px;
+        top: 110px;
     }
 
     #text {

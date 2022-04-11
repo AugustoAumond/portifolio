@@ -1,10 +1,44 @@
 body{
     align-items: center;
+    width: 100%;
 }
 
-*{   align-items: center;
-    padding: 0;
+html {
+    width: 100%;
+}
+
+@font-face {
+    font-family: Roboto Slab;
+    src: url(/public/font/static/OpenSans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto Slab ;
+    src: url(/public/font/static/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto Slab ;
+    src: url(/public/font/static/OpenSans/OpenSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto Slab ;
+    src: url(/public/font/static/OpenSans_Condensed/OpenSans_Condensed-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto Slab ;
+    src: url(/public/font/static/OpenSans_SemiCondensed/OpenSans_SemiCondensed-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto Slab;
+    src: url(/public/font/static/OpenSans/OpenSans-Light.ttf);
+}
+
+
+*{
     margin: 15px;
     box-sizing: border-box;
 }
-

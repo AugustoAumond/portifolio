@@ -16,8 +16,10 @@ function MainProjects(){
         } else if (index === 1){
             history.push('/tiki');
         }  else if (index === 2){
+            history.push('/nerdweb');
+        }   else if (index === 3){
             history.push('/codificar');
-        }      
+        }        
     }   
 
     return(
@@ -35,14 +37,14 @@ function MainProjects(){
                     </strong>
             </Description>    
         </Project>
-            <DivRight index={index}>
-                <ImArrowRight onClick={(()=> setIndex(index + 1))} index={index} id="arrowright"/>
-                <h3 id='right'>Próximo Projeto</h3>
-            </DivRight>
-            <DivLeft index={index}>
-                <ImArrowLeft onClick={(()=> setIndex(index - 1))} id='arrowleft'/>
-                <h3 id='left' >Projeto Anterior</h3>
-            </DivLeft>  
+        <DivRight index={index}>
+            <ImArrowRight onClick={(()=> setIndex(index + 1))} index={index} id="arrowright"/>
+            <h3 id='right'>Próximo Projeto</h3>
+        </DivRight>
+        <DivLeft index={index}>
+            <ImArrowLeft onClick={(()=> setIndex(index - 1))} id='arrowleft'/>
+            <h3 id='left' >Projeto Anterior</h3>
+        </DivLeft>  
     </Div>
     )    
 }
@@ -53,9 +55,25 @@ height: 776px;
 width: 650px;
 position: absolute;
 top: 52px;
-left: 720px;
-background: ${props => props.index === 0 ? '#3b3838d4': (props.index === 1 ? '#26093ac7' : '#294232b8')};
+right: 300px;
+background: ${props => props.index === 0 ? '#3b3838d4': (props.index === 1 ? '#26093ac7' : (props.index === 2 ? '#033244cc' : '#294232b8'))};
 
+    @media (max-width: 1450px){
+        top: 912px;
+        right: 25%;
+    }
+
+    @media (max-width: 900px){
+        right: 25%;
+        width: 300px;
+        height: 619px;
+        top: 690px;
+        left: none;
+    }
+
+    @media (max-width:500px){
+        right: 10%;     
+    }
 `
 
 const Title = styled.div`
@@ -63,6 +81,12 @@ color: white;
 text-align: center;
 position: relative;
 top: 25px;
+
+    h1 {
+    @media (max-width: 900px){
+        font-size: 22px;
+    }
+}
 `
 
 const Description = styled.div`
@@ -73,6 +97,25 @@ position: relative;
 height: 285px;
 width: 490px;
 background: #ffffffad;
+
+    @media (max-width: 900px){
+        height: 285px;
+        width: 220px;
+        left: 14px;
+        top: -225px;
+    }
+
+    ul {
+        list-style: none;
+        position: absolute;
+        left: -47px;
+    }
+
+    li {
+        font-size: 10px;
+    }
+
+
 `
 
 const RouteProject = styled.div`
@@ -84,10 +127,18 @@ width: 656px;
 
     img{
         width: 600px;
+        height: 335px;
         position: absolute;
         left: 12px;
         border-radius: 20px;
         cursor: pointer;
+
+        @media (max-width: 900px){
+            width: 270px;
+            height: 159px;
+            top: -24px;
+            left: 1px;
+        }
     }
 `
 
@@ -115,7 +166,7 @@ text-align: justify;
 `
 
 const DivRight = styled.div`
-display: ${props => props.index < 2 ? 'flex' : 'none'};
+display: ${props => props.index < 3 ? 'flex' : 'none'};
 
     #right {
         top: 302px;
@@ -123,7 +174,14 @@ display: ${props => props.index < 2 ? 'flex' : 'none'};
         height: 40px;
         width: 30px;
         left: 489px;
-        color: ${props => props.index === 0 ? '#06060b;' : 'white'};
+        color: white;
+
+        @media (max-width: 900px){
+            left: 191px;
+            top: 84px;
+            width: 39px;
+            font-size: 8px;
+        }
     }
 
     #arrowright {  
@@ -133,7 +191,14 @@ display: ${props => props.index < 2 ? 'flex' : 'none'};
         width: 30px;
         left: 565px;
         cursor: pointer;
-        color: ${props => props.index === 0 ? '#06060b;' : 'white'};
+        color: white;
+
+        @media (max-width: 900px){
+            top: 62px;
+            left: 244px;
+            height: 17px;
+            width: 17px;
+        }
     }
 `
 
@@ -141,22 +206,37 @@ const DivLeft = styled.div`
 display: ${props => props.index > 0 ? 'flex' : 'none'};
 
     #arrowleft {
-        top: ${props => props.index === 2 ? '269px' : '184px'};
+        top: ${props => props.index === 3 ? '269px' : '184px'};
         position: relative;
         height: 40px;
         width: 30px;
         color: ${props => props.index === 0 ? '#06060b;' : 'white'};
         left: -11px;
         cursor: pointer;
+
+        @media (max-width: 900px){
+            top: ${props => props.index === 3 ? '62px' : '-23px'};
+            left: -17px;
+            height: 17px;
+            width: 17px;
+        }
     }
 
     #left{
         position: relative;
-        top: ${props => props.index === 2 ? '314px' : '229px;'};
+        top: ${props => props.index === 3 ? '314px' : '229px;'};
         height: 40px;
         width: 30px;
         color: ${props => props.index === 0 ? '#06060b;' : 'white'};
         left: -84px;
+
+        @media (max-width: 900px){
+            top: ${props => props.index === 3 ? '84px' : '-1px;'};
+            left: -69px;
+            width: 39px;
+            font-size: 8px;
+        }
     }
+
 `
 

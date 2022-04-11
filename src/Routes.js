@@ -6,8 +6,7 @@ import Codificar from './routes/codificar/Codificar';
 import Homepage from './routes/homepage/Homepage';
 import Marlin from './routes/marlin/Marlin';
 import Tiki from './routes/tiki/Tiki';
-
-
+import Nerdweb from './routes/nerdweb/nerdweb'
 
 function MyRoutes (){
     return (
@@ -18,6 +17,7 @@ function MyRoutes (){
             <Route path='/codificar' component={Codificar}/> 
             <Route path='/questions' component={Questions}/> 
             <Route path='/start' component={Start}/> 
+            <Route path='/nerdweb' component={Nerdweb}/>
         </BrowserRouter>
     )
 }

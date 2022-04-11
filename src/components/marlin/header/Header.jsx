@@ -2,14 +2,12 @@ import styled from 'styled-components';
 
 import {useMediaQuery} from 'react-responsive'
 
-import Menu from "./../menu/Menu";
 
 function Header () {
   const mobile = useMediaQuery({ query: '(max-width: 666px)' })
 
     return (
       <Head>  
-        <Menu/>
         {mobile ? <img alt='' src={`${process.env.PUBLIC_URL}/img/marlin/Grupo309.png`} /> : <img alt='' src={`${process.env.PUBLIC_URL}/img/marlin/painel.png`}/>}
           <p id='text'>Conforto e qualidade para levar bem-estar com alto padrão de atendimento a seus funcionários.</p>
           <div id="line"></div>            
@@ -28,8 +26,9 @@ export default Header;
 
 const Head = styled.div`
   position: relative;
-  width: 1366px;
+  width: 100%;
   height: 676px;
+  top: 93px;
 
   @media(max-width: 666px){
     width: 375px;

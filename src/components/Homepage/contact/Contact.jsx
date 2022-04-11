@@ -6,9 +6,7 @@ import {HiOutlineDocumentText, HiOutlineMail} from 'react-icons/hi';
 function Contact (){
     return (
         <Div>
-            <Img>
-                <img src={`${process.env.PUBLIC_URL}/img/utilizar2.jpg`} alt="" />
-            </Img>
+            <Img src={`${process.env.PUBLIC_URL}/img/utilizar2.jpg`} alt=""></Img>
             <Network>
                 <a href="https://www.instagram.com/augusto_aumond/"><BsInstagram id='insta'/></a> 
                 <a href="https://www.linkedin.com/in/augusto-sturmer-176227207/"><BsLinkedin id='linkedin'/> </a> 
@@ -44,9 +42,24 @@ top: 50px;
 width: 400px;
 height: 780px;
 border-radius: 5px;
-left: 97px;
+
+    @media (max-width: 1450px){
+        right: 35%;   
+    }
+
+    @media (max-width:900px){
+        margin: 0px;
+        width: 300px;
+        right: 27%;     
+        height: 630px; 
+    }
+
+    @media (max-width:500px){
+        right: 13%;     
+    }
+
 `
- const Img = styled.div`
+ const Img = styled.img`
  position: relative;
  top: 15px;
  left: 15px;
@@ -55,14 +68,11 @@ left: 97px;
  width: 90px;
  background: white;
 
-    img{
-        height: 90px;
-        border-radius: 100px;
-        width: 90px;
-        position: relative;
-        top: -15px;
-        left: -14px;
-    }
+    @media (max-width:900px){
+        left: -10px;
+        height: 65px;
+        width: 65px;
+    }    
  `
 
  const Network = styled.div`
@@ -72,6 +82,15 @@ left: 97px;
  height: 75px;
  width: 235px;
  background: #ffffffad;
+    
+    @media (max-width:900px){
+        left: 65px;
+        top: 30px;
+        height: 40px;
+        width: 205px;
+        display: flex;
+        align-items: center;
+    }
 
     #insta{
         color: #2a2a48;
@@ -80,6 +99,12 @@ left: 97px;
         top: 13px;
         height: 20px;
         width:20px;
+
+        @media (max-width:900px){
+            top: 2px;
+            height: 15px;
+            width: 15px;
+        }
     }
 
     #linkedin{
@@ -89,6 +114,12 @@ left: 97px;
         top: 13px;
         height: 20px;
         width:20px;
+
+        @media (max-width:900px){
+            top: 2px;
+            height: 15px;
+            width: 15px;
+        }
     }
 
     #github{
@@ -98,6 +129,13 @@ left: 97px;
         top: 13px;
         height: 21px;
         width:21px;
+
+        @media (max-width:900px){
+            top: 2px;
+            left: -104px;
+            height: 15px;
+            width: 15px;
+        }
     }
 
     #curriculum{
@@ -107,6 +145,13 @@ left: 97px;
         color: #2a2a48;
         position: relative;
         left: 85px;
+
+        @media (max-width:900px){
+            top: 2px;
+            left: -150px;
+            height: 19px;
+            width: 19px;
+        }
     }
 
     #email{
@@ -116,16 +161,13 @@ left: 97px;
         color: #2a2a48;
         position: relative;      
         left: 37px;
-    }
 
-    #phone{
-        width: 28px;
-        height: 28px;
-        top: -45px;
-        color: #2a2a48;
-        position: relative;      
-        left: 37px;
-
+        @media (max-width:900px){
+            top: 2px;
+            left: -197px;
+            height: 19px;
+            width: 19px;
+        }
     }
 
     #phone{
@@ -136,6 +178,13 @@ left: 97px;
         height: 21px;
         width:21px;
 
+        @media (max-width:900px){
+            top: 2px;
+            left: -240px;
+            height: 15px;
+            width: 15px;
+        }
+
     }
  `
 
@@ -144,30 +193,56 @@ left: 97px;
  const Datas = styled.div`
  position: relative;
  top: 25px; 
-}
 
-    p{  padding: 5px;
+
+    p   {  
+        padding: 5px;
         height: 50px;
         border: solid 1px;
         width: 341px;
         box-sizing: border-box;
         margin-top: 5px;
         background: #ffffffad;
+
+        @media (max-width:900px){
+            top: 2px;
+            width: 265px;
+            height: 35px;
+            font-size: 12px;
+            margin-left: 3px;
+        }
     }
 
     strong{
         font-size: 17px;
+
+        @media (max-width:900px){
+            font-size: 12px;
+        }
     }
     
     `
 
 const History = styled.div`
 border: solid 1px;
-height: 288px;
 position: relative;
 top: 30px;
 text-align: justify;
 width: 344px;
 left: 14px;
 background: #ffffffad;
+
+    @media (max-width:900px){
+        font-size: 12px;
+        width: 265px;
+        margin-left: 3px;
+    }
+
+    strong {
+        @media (max-width:900px){
+            font-size: 12px;
+        }
+    }
+
+    
 `
