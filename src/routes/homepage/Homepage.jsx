@@ -9,8 +9,7 @@ function Homepage(){
 
 
   return (  
-    <BodyBox id="bodybox">
-      <img id="background" src={`${process.env.PUBLIC_URL}/img/background2.jpg`} alt="" />
+    <BodyBox class="bodybox">
       <Contact/>
       <Projects/>      
     </BodyBox>
@@ -20,15 +19,14 @@ function Homepage(){
 export default Homepage;
 
 const BodyBox = styled.div`
- 
-  #background{
-    display: flex;
-    position: relative;
-    left: -55px;
-    top: -23px;
-    height: 910px;
-    width: 100%;
-    margin: 15px;
+  display: flex;
+  position: relative;
+  left: -55px;
+  top: -23px;
+  height: 1030px;
+  width: 100%;
+  margin: 15px;
+  background: #9e9e9e;
 
     @media (max-width: 1450px){
       height: 1750px;
@@ -37,7 +35,7 @@ const BodyBox = styled.div`
     @media (max-width: 900px){
       height: 1435px;
     }
-  }
+
 `
 
 const DivContact = styled.div`

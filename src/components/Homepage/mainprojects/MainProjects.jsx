@@ -55,12 +55,12 @@ height: 776px;
 width: 650px;
 position: absolute;
 top: 52px;
-right: 300px;
+left: 550px;
 background: ${props => props.index === 0 ? '#3b3838d4': (props.index === 1 ? '#26093ac7' : (props.index === 2 ? '#033244cc' : '#294232b8'))};
 
     @media (max-width: 1450px){
         top: 912px;
-        right: 25%;
+        right: 17%;
     }
 
     @media (max-width: 900px){

@@ -39,12 +39,13 @@ const Div = styled.div`
 background: #3b3838d4;
 position: absolute;
 top: 50px;
+left: 50px;
 width: 400px;
 height: 780px;
 border-radius: 5px;
 
     @media (max-width: 1450px){
-        right: 35%;   
+        right: 25%;   
     }
 
     @media (max-width:900px){

@@ -33,6 +33,7 @@ export const projects = [
         type:'Criação de página web',
         discription: 
         <ul>
+            <li><strong>EM MANUTENÇÃO</strong></li>
             <li>Sobreposição de texto e imagem</li>
             <li>Responsividade (1920px, 1024px, 666px)</li>
             <li>Armazenamento dos dados no localStorage</li>
