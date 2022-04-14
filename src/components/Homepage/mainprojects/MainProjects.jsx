@@ -51,28 +51,29 @@ function MainProjects(){
 export default MainProjects;
 
 const Div = styled.div`
-height: 776px;
-width: 650px;
-position: absolute;
-top: 52px;
-left: 550px;
-background: ${props => props.index === 0 ? '#3b3838d4': (props.index === 1 ? '#26093ac7' : (props.index === 2 ? '#033244cc' : '#294232b8'))};
+    height: 776px;
+    width: 700px;
+    position: absolute;
+    top: 52px;
+    left: 622px;
+    background: ${props => props.index === 0 ? '#3b3838d4': (props.index === 1 ? '#26093ac7' : (props.index === 2 ? '#033244cc' : '#294232b8'))};
 
     @media (max-width: 1450px){
         top: 912px;
-        right: 17%;
+        right: 4%;
+        left: unset;
     }
 
     @media (max-width: 900px){
-        right: 25%;
+        right: 115px;
         width: 300px;
         height: 619px;
         top: 690px;
         left: none;
     }
 
-    @media (max-width:500px){
-        right: 10%;     
+    @media (max-width:650px){
+        right: 5%;     
     }
 `
 
@@ -126,7 +127,7 @@ height: 346px;
 width: 656px;
 
     img{
-        width: 600px;
+        width: 650px;
         height: 335px;
         position: absolute;
         left: 12px;

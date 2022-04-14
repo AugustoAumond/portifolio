@@ -49,10 +49,16 @@ export default Marlin;
 
 
 const DivBody = styled.div`
+  width: 100%;
+  max-width: 1366px;
+  position: absolute;
+  right: 17%;
+  height: 100vh;
+  margin: 0px;
 
-width: 100%;
-height: 100vh;
-margin: 0px;
+  @media (max-width: 1366px){
+    right: unset;
+  }
 `
 
 const ButtonBack = styled.button`

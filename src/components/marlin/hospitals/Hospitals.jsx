@@ -313,7 +313,7 @@ const Api = styled.div `
     @media(max-width: 666px){
         width: 380px;
         top: 10px;
-        display: flex;
+        display: none;
         flex-direction: column;
         right: 430px;
     }

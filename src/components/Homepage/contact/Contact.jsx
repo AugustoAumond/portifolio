@@ -36,27 +36,28 @@ function Contact (){
 export default Contact;
 
 const Div = styled.div`
-background: #3b3838d4;
-position: absolute;
-top: 50px;
-left: 50px;
-width: 400px;
-height: 780px;
-border-radius: 5px;
+    background: #3b3838d4;
+    position: absolute;
+    top: 50px;
+    left: 145px;
+    width: 440px;
+    height: 780px;
+    border-radius: 5px;
 
     @media (max-width: 1450px){
-        right: 25%;   
+        right: 14%;
+        left: unset;
     }
 
     @media (max-width:900px){
         margin: 0px;
         width: 300px;
-        right: 27%;     
+        right: 10%;     
         height: 630px; 
     }
 
-    @media (max-width:500px){
-        right: 13%;     
+    @media (max-width:650px){
+        right: 6%;     
     }
 
 `
@@ -77,12 +78,12 @@ border-radius: 5px;
  `
 
  const Network = styled.div`
- left: 120px;
- position: absolute;
- top: 35px;
- height: 75px;
- width: 235px;
- background: #ffffffad;
+    left: 120px;
+    position: absolute;
+    top: 35px;
+    height: 75px;
+    width: 281px;
+    background: #ffffffad;
     
     @media (max-width:900px){
         left: 65px;
@@ -111,7 +112,7 @@ border-radius: 5px;
     #linkedin{
         color: #2a2a48;
         position: relative;
-        left: -59px;
+        left: -52px;
         top: 13px;
         height: 20px;
         width:20px;
@@ -126,7 +127,7 @@ border-radius: 5px;
     #github{
         color: #2a2a48;
         position: relative;      
-        left: -109px;
+        left: -94px;
         top: 13px;
         height: 21px;
         width:21px;
@@ -145,7 +146,7 @@ border-radius: 5px;
         top: -46px;
         color: #2a2a48;
         position: relative;
-        left: 85px;
+        left: 110px;
 
         @media (max-width:900px){
             top: 2px;
@@ -161,7 +162,7 @@ border-radius: 5px;
         top: -45px;
         color: #2a2a48;
         position: relative;      
-        left: 37px;
+        left: 69px;
 
         @media (max-width:900px){
             top: 2px;
@@ -174,8 +175,8 @@ border-radius: 5px;
     #phone{
         color: #2a2a48;
         position: relative;
-        left: 169px;
-        top: -106px;
+        left: 35px;
+        top: -49px;
         height: 21px;
         width:21px;
 
@@ -192,15 +193,15 @@ border-radius: 5px;
 
 
  const Datas = styled.div`
- position: relative;
- top: 25px; 
+    position: relative;
+    top: 25px; 
 
 
     p   {  
         padding: 5px;
         height: 50px;
         border: solid 1px;
-        width: 341px;
+        width: 390px;
         box-sizing: border-box;
         margin-top: 5px;
         background: #ffffffad;
@@ -225,13 +226,16 @@ border-radius: 5px;
     `
 
 const History = styled.div`
-border: solid 1px;
-position: relative;
-top: 30px;
-text-align: justify;
-width: 344px;
-left: 14px;
-background: #ffffffad;
+    border: solid 1px;
+    position: relative;
+    top: 30px;
+    text-align: justify;
+    width: 390px;
+    left: 14px;
+    background: #ffffffad;
+
+
+
 
     @media (max-width:900px){
         font-size: 12px;

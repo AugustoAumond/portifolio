@@ -10,8 +10,10 @@ function Homepage(){
 
   return (  
     <BodyBox class="bodybox">
-      <Contact/>
-      <Projects/>      
+      <div className="centralize">
+        <Contact/>
+        <Projects/> 
+      </div>     
     </BodyBox>
   )
 }
@@ -34,6 +36,13 @@ const BodyBox = styled.div`
 
     @media (max-width: 900px){
       height: 1435px;
+    }
+
+    .centralize {
+      right: 5%;
+      position: absolute;
+      width: 1348px;
+      height: 1000px;
     }
 
 `
