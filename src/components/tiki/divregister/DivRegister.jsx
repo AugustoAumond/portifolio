@@ -38,6 +38,8 @@ function Register () {
 
     // Validando os dados dos inputs e zerando os mesmos;
     function Enviar(){
+        let name = document.querySelector('#name'); 
+        let email = document.querySelector('#email');
         let list = JSON.parse(localStorage.getItem('list'));  
         if (name.value.length < 4){
             window.alert('Digite seu nome.')
