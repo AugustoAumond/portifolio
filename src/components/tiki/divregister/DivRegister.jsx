@@ -39,10 +39,7 @@ function Register () {
     // Validando os dados dos inputs e zerando os mesmos;
     function Enviar(){
         let list = JSON.parse(localStorage.getItem('list'));  
-        if  (name === null || email === null){
-            window.alert(' Insira seus dados!');
-        }    
-        else if (name.value.length < 4){
+        if (name.value.length < 4){
             window.alert('Digite seu nome.')
         }
         else if (email.value.indexOf('@') === -1 || email.value.indexOf('.') === -1){
