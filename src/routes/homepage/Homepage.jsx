@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import './../../Styles/GlobalStyles.css';
 
 import Contact from '../../components/Homepage/contact/Contact';
-import Projects from "../../components/Homepage/mainprojects/MainProjects";
+import Projects from "../../components/Homepage/mainprojects/Projects";
 
 
 function Homepage(){  
@@ -10,10 +9,11 @@ function Homepage(){
 
   return (  
     <BodyBox class="bodybox">
-      <div className="centralize">
-        <Contact/>
-        <Projects/> 
-      </div>     
+
+      <Contact/>
+
+      <Projects/>
+
     </BodyBox>
   )
 }
@@ -21,28 +21,15 @@ function Homepage(){
 export default Homepage;
 
 const BodyBox = styled.div`
-  display: flex;
+  display: block;
   position: relative;
   left: -55px;
   top: -23px;
-  height: 1030px;
   width: 100%;
   margin: 15px;
-  background: #9e9e9e;
 
     @media (max-width: 1450px){
       height: 1750px;
-    }
-
-    @media (max-width: 900px){
-      height: 1435px;
-    }
-
-    .centralize {
-      right: 5%;
-      position: absolute;
-      width: 1348px;
-      height: 1000px;
     }
 
 `
