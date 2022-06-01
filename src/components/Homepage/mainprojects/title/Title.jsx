@@ -3,7 +3,7 @@ import styled from 'styled-components';
 function Title (){
     return (
         <DivTitle>
-            <h1>P R I N C I P A I S  P R O J E T O S</h1>
+            <h1>PRINCIPAIS PROJETOS</h1>
         </DivTitle>
     )
 }
