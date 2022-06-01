@@ -8,7 +8,7 @@ function Header () {
 
     return (
       <Head>  
-        {mobile ? <img alt='' src={`${process.env.PUBLIC_URL}/img/marlin/Grupo309.png`} /> : <img alt='' src={`${process.env.PUBLIC_URL}/img/marlin/painel.png`}/>}
+        {mobile ? <img id="img" alt='' src={`${process.env.PUBLIC_URL}/img/marlin/Grupo309.png`} /> : <img id='img' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/painel.png`}/>}
           <p id='text'>Conforto e qualidade para levar bem-estar com alto padrão de atendimento a seus funcionários.</p>
           <div id="line"></div>            
           <p id='goldplan'>Conheça o plano Ouro da Porto Seguro Saúde.</p>
@@ -27,11 +27,18 @@ export default Header;
 const Head = styled.div`
   position: relative;
   width: 100%;
+  max-width: 1450px;
   height: 676px;
-  top: 93px;
+  margin: 0 auto;
 
   @media(max-width: 666px){
     width: 375px;
+  }
+
+  #img {
+    width: 100%;
+    max-width: 1450px;
+    height: 768px;
   }
 
     #text{

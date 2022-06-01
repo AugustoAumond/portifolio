@@ -1,11 +1,9 @@
-import {useState} from 'react';
 import styled from 'styled-components';
 import {useHistory} from 'react-router-dom';
 
 import {projects} from './Projects.action';
 
 function MainProjects (){
-    const [index, setIndex] = useState();
     const history = useHistory();
 
     const routes =  (index) => {

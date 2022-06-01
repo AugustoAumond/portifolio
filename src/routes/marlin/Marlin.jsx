@@ -5,8 +5,8 @@ import {useHistory} from 'react-router-dom'
 
 import Menu from './../../components/marlin/menu/Menu';
 import Header from './../../components/marlin/header/Header';
-import Hospitais from './../../components/marlin/hospitals/Hospitals'
-import KnowMore from './../../components/marlin/know_more/Knowmore';
+import Hospitais from './../../components/marlin/hospitals/Hospitals';
+
 
 import axios from 'axios';
 
@@ -39,8 +39,8 @@ function Marlin(){
       <Menu/>
       <Header/>
       <Hospitais list={data}/> 
-     <KnowMore/>
-      <ButtonBack onClick={(()=> Back())}> Voltar para página inicial</ButtonBack>
+     {/*<KnowMore/>
+      <ButtonBack onClick={(()=> Back())}> Voltar para página inicial</ButtonBack> */}
     </DivBody>
   )
 }
@@ -50,11 +50,9 @@ export default Marlin;
 
 const DivBody = styled.div`
   width: 100%;
-  max-width: 1366px;
-  position: absolute;
-  right: 17%;
+  position: relative;
   height: 100vh;
-  margin: 0px;
+  margin: 0 auto;
 
   @media (max-width: 1366px){
     right: unset;

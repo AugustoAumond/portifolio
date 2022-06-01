@@ -27,10 +27,7 @@ const BodyBox = styled.div`
   top: -23px;
   width: 100%;
   margin: 15px;
-
-    @media (max-width: 1450px){
-      height: 1750px;
-    }
+  height: 1750px;
 
 `
 

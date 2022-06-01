@@ -38,6 +38,7 @@ function Hospitais (props) {
             <div id="line"></div>
             <p id="description">Contando com os melhores hospitais do Rio de Janeiro, o plano Ouro dispõe para você as redes mais referenciadas com diversos benefícios para que você tenha um atendimento totalmente personalizado.</p>     
            
+           
             {hospitaisEmDestaque.map((list, index)=>(
                 <Photos id={`photos${index}`} key={index} open={open}>
                     <img alt='' id={`hosp${index}`} open={open} src={list.foto}></img>  
@@ -66,7 +67,7 @@ function Hospitais (props) {
                     ))} 
                 </Api> } 
                 </Photos>
-            ))}               
+            ))}   {/**/}            
         
         </Hospitals>
     )
@@ -76,9 +77,11 @@ export default Hospitais;
 
 const Hospitals = styled.div`
 position: relative;
-height: 1135px;
+height: 445px;
 width: 100%;
-top: 150px;
+max-width: 1450px;
+top: 63px;
+margin: 0 auto;
 
     @media(max-width: 666px){
         position: relative;
@@ -87,7 +90,7 @@ top: 150px;
 
     #hospitals{
         position: relative;
-        top: 95px;
+        top: 50px;
         left: 104px;
         width: 330px;
         height: 39px;
@@ -97,7 +100,6 @@ top: 150px;
         color: #171717;
 
         @media(max-width: 666px) {
-            top: 15px;
             left: 16px;
             width: 251px;
             height: 30px;
@@ -110,7 +112,7 @@ top: 150px;
 
     #line {
         position: relative;
-        top: 82px;
+        top: 22px;
         left: 103px;
         width: 177px;
         border-bottom: solid 2px #F7B53D;
@@ -125,9 +127,10 @@ top: 150px;
 
     #description{
         position: relative;
-        top: 98px;
+        top: 14px;
         left: 103px;
-        width: 1160px;
+        width: 83%;
+        max-width:1190px;
         height: 54px;text-align: left;
         font: normal normal normal 23px/27px Open Sans;
         letter-spacing: 0px;

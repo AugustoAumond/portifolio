@@ -71,6 +71,7 @@ const Know = styled.div`
     top: 1px;
     width: 100%;
     top: -400px;
+    margin: 0 auto;
 
     @media(max-width: 666px){
         width: 380px;
