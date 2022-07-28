@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+ 
+ .namehospitals {
+    text-align: center;
+    width: 100%;
+ }
+ 
+ .open {
+    display: flex;
+
+    
+ }
+
+ .img {
+    max-width: 350px;
+    min-width: 150px;
+    width: 100%;
+    margin: 25px;
+    margin-top: 42px;
+ }
+
+.detail{
+    max-width: 375px;
+    width: 100%;
+    min-width: 300px;
+    margin: 35px;
+    font-family: 'Open Sans', sans-serif;
+
+    
+ }
+
+ .contacts {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 35px;
+    min-width: 200px;;
+ }
+
+    .align {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;;
+    }

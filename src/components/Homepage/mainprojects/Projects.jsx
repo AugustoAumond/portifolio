@@ -18,14 +18,10 @@ function Projects(){
 export default Projects;
 
 const Div = styled.div`
-height: 400px;
-width: 80%;
+width: 100%;
 position: relative;
-top: 52px;
 margin: 0 auto;
-background: #293345;
-border: solid white;
-
+background: linear-gradient(360deg, #080325, gray);
 `
 
 

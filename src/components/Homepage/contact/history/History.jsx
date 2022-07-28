@@ -25,12 +25,9 @@ const DivHistory = styled.div`
 position: relative;
 margin: 0 auto;
 width: 100%;
-top: 110px;
 
     #fundo {
         position: relative;
-        top: -216px;
-        height: 300px;
         width: 100%;
         background: #293345;
         z-index: -1;
@@ -40,12 +37,12 @@ top: 110px;
 
 const His = styled.div`
     position: relative; 
-    top: 59px;
     text-align: justify;
-    background: #ffffffad;
     margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 800px;
+    color: white;
+    margin-bottom: 80px;
 
     h2 {   
         padding: 5px;

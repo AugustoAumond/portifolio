@@ -4,10 +4,8 @@ export function OpenDiv (open){
     let div = document.querySelector('#div');
     if (open === false){
         api.style.display = 'flex';
-        div.style.height = '2065px';
     } else {
         api.style.display = 'none';
-        div.style.height = '1135px';
     }
 }
 

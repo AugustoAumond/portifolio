@@ -1,23 +1,22 @@
 import styled from 'styled-components'
 
-import Img from './img/Img';
 import Datas from './datas/Datas';
 import History from './history/History';
 import Network from './network/Network';
+import Navegation from './navegation/Navegation';
 
 function Contact (){
     return (
         <DivContact>
-            <Div>
-                <Img/>
+            <Navegation/>
 
+            <div id='flex'>
                 <Datas/>
-                   
-                <History/>
 
-                <Network/>
-                
-            </Div>
+                <Network/>   
+            </div>  
+
+            <History/>          
         </DivContact>
     )
 }
@@ -25,17 +24,18 @@ function Contact (){
 export default Contact;
 
 const DivContact = styled.div`
+display: flex;
+flex-direction: column;
 width: 100%;
-height: 70%;
 margin: 0 auto;
+color: white;
+background: linear-gradient(180deg, #080325, gray);
+
+    #flex{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
 `
 
-const Div = styled.div`
-    position: relative;
-    top: 50px;
-    width: 80%;
-    margin: 0 auto;
-    height: 20%;
-    border-radius: 5px;
-    background: #293345;
-`

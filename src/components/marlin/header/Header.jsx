@@ -9,8 +9,12 @@ function Header () {
     return (
       <Head>  
         {mobile ? <img id="img" alt='' src={`${process.env.PUBLIC_URL}/img/marlin/Grupo309.png`} /> : <img id='img' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/painel.png`}/>}
-          <p id='text'>Conforto e qualidade para levar bem-estar com alto padrão de atendimento a seus funcionários.</p>
-          <div id="line"></div>            
+          <div id='text'>
+            Conforto e qualidade para levar bem-estar com alto padrão de atendimento a seus funcionários.
+            <div id="line"></div>   
+          </div>
+ 
+                  
           <p id='goldplan'>Conheça o plano Ouro da Porto Seguro Saúde.</p>
           <p id='starting'> A partir de </p>
           <p id='reais'> R$ </p>  
@@ -28,7 +32,7 @@ const Head = styled.div`
   position: relative;
   width: 100%;
   max-width: 1450px;
-  height: 676px;
+  height: 768px;
   margin: 0 auto;
 
   @media(max-width: 666px){
@@ -44,12 +48,12 @@ const Head = styled.div`
     #text{
       position: absolute;
       top: 206px;
-      width: 438px;
+      width: 431px;
       height: 275px;
       left: 32px;
       color: white;
       text-align: left;
-      font: normal normal bold 44px/55px Open Sans;
+      font: normal normal bold 40px/55px Open Sans;
       text-shadow: 0px 3px 6px #00000017;
 
       @media (max-width: 666px){   
@@ -69,18 +73,13 @@ const Head = styled.div`
  
 
     #line {
-      position: absolute;
-      top: 475px;
-      left: 35px;
+      position: relative;
+      top: 20px;
       width: 163px;
-      border-bottom: solid 1px white;
+      border-bottom: solid 3px white;
 
       @media(max-width: 666px){
-        position: absolute;
-        top: 483px;
-        left: 29px;
         width: 137px;
-        border-bottom: solid 1px white;
       }
     }
 

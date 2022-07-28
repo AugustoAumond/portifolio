@@ -7,7 +7,6 @@ import Menu from './../../components/marlin/menu/Menu';
 import Header from './../../components/marlin/header/Header';
 import Hospitais from './../../components/marlin/hospitals/Hospitals';
 
-
 import axios from 'axios';
 
 function Marlin(){ 

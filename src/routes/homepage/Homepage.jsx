@@ -21,19 +21,13 @@ function Homepage(){
 export default Homepage;
 
 const BodyBox = styled.div`
-  display: block;
   position: relative;
-  left: -55px;
-  top: -23px;
+  border: solid 1px #80808085;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin: 15px;
-  height: 1750px;
-
+  height: 100vh;
 `
-
-const DivContact = styled.div`
-width: 100%;
-margin: auto;`
 
 
 

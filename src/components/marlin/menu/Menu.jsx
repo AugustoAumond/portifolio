@@ -15,11 +15,11 @@ function Menu () {
         </div>
       
         <ul class='list'>     
-            <li ><p id="txtmarlin">Sobre</p></li>
-            <li > <p id="txtmarlin">Hospitais </p></li>
-            <li > <p id="menu">Beneficios</p></li>
-            <li ><p id="menu">Serviços Especiais</p></li>
-            <li ><p id="menu">Contato</p></li>
+            <li >Sobre</li>
+            <li > Hospitais </li>
+            <li > Beneficios</li>
+            <li id='especial'>Serviços Especiais</li>
+            <li >Contato</li>
         </ul>
     </Options>
     )
@@ -30,34 +30,34 @@ export default Menu;
 const Options = styled.div`
     position: fixed;
     display: flex;
-    position: relative;
     z-index: 2;
     background: white;
     height: 94px;
-    width: 100%;
+    width: 99%;
     max-width: 1366px;
-    margin: 0 auto;
     justify-content: space-between;
     align-itens: center;
 
     @media(max-width: 666px){  
         position: relative;
-        justify-content: space-between;
+        max-width: 350px;
         height: 61px;
+        margin: 0 auto;
     }
 
     #divNort {
-    display: flex;
-    margin-left: 20px;
-    align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        margin: 15px;
+        max-width: 180px;
 
         #norte{
-        position: relative;
-        background: white;
-        width: 60px;
-        height: 43px;
-        background: transparent url('img/marlin/logo-Norte-a-Sul.png') 0% 0% no-repeat padding-box;
-        opacity: 1;
+            max-width: 60px;
+            height: 43px;
+            background: transparent url('img/marlin/logo-Norte-a-Sul.png') 0% 0% no-repeat padding-box;
+            opacity: 1;
 
         @media(max-width: 666px){      
             width: 42px;
@@ -66,13 +66,12 @@ const Options = styled.div`
     }
 
     #porto {
-        position: relative;
         background: white;
-        left: 30px;
-        width: 98px;
+        margin: 30px;
+        max-width: 98px;
         height: 31px;
 
-        @media(max-width: 760px){
+        @media(max-width: 666px){
             width: 73px;
             height: 23px;
         }
@@ -80,132 +79,51 @@ const Options = styled.div`
  }
 
  #divbars {
-    position: relative;
     display: flex;
-    align-items: center;
     height: 61px;
-    right: 50px;
+    align-items: center;
 
     #bars{
         display: none;
+        width: 35px;
+        height: 45px;
+        color: #000000;
 
-        @media(max-width: 760px){
-            display: flex;
-            position: relative;
-            width: 35px;
-            height: 45px;
-            color: #000000;
+        @media(max-width: 666px){
+            display: flex;   
         }
     }
  }
     
     .list {
-        position: absolute;
         display: flex;
         list-style: none;
-        right: 5px;
         width: 550px;
         justify-content: space-around;
+        align-items: center;
 
-        @media (max-width: 760px){
+        @media (max-width: 666px){
             display: none;
         }
-}
+    }
 
         li{
             margin-left: 10px;
-            right: 150px;
+            color: #D6A430;
+            font: 20px/27px open-sans;
+            font-weight: 600;
+            text-align: center;
+
+            @media(max-width: 800px){
+                font-size: 14px;
+            } 
         }
+
     }
 
-    #sobre {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 32px;  
-        width: 56px;
-        height: 27px;
-
-        @media(max-width: 1200px){
-            font-size: 12px;
-        }
-
-        @media(max-width: 666px){
-            display: none;
-        }
-    }
-
-    #hospitais {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        top: 32px;
-        width: 90px;
-        height: 27px;
-
-        @media(max-width: 1200px){
-            font-size: 12px;
-        }
-
-        @media(max-width: 666px){
-            display: none;
-        }
-    }
-
-    #beneficios {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        top: 32px;
-        width: 100px;
-        height: 27px;
-
-        @media(max-width: 1200px){
-            font-size: 12px;
-        }
-
-        @media(max-width: 666px){
-            display: none;
-        }
-    }
-
-    #servicos {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        top: 32px;
-        width: 220px;
-        height: 27px;
-
-        @media(max-width: 1200px){
-            font-size: 12px;
-        }
-
-        @media(max-width: 666px){
-            display: none;
-        }
-    }
-
-    #contato {
-        display: flex;
-        align-items: center;
-        position: absolute;     
-        top: 32px;
-        width: 78px;
-        height: 27px;
-
-        @media(max-width: 1200px){
-            font-size: 12px;
-        }
-
-        @media(max-width: 666px){
-            display: none;
-        }
-    }
 
     #txtmarlin {
-        text-align: left;
-        font: normal normal 600 20px/27px Open Sans;
+        
         letter-spacing: 0px;
         color: #D6A430;
         opacity: 1;
@@ -213,14 +131,9 @@ const Options = styled.div`
         @media(max-width: 1200px){
             font-size: 14px;
         }
-
-        @media(max-width: 666px) {
-            display: none;
-        }
     }
 
     #menu {
-        text-align: center;
         font: normal normal 600 20px/27px Open Sans;
         letter-spacing: 0px;
         color: #D6A430;
@@ -228,11 +141,7 @@ const Options = styled.div`
 
         @media(max-width: 1200px){
             font-size: 14px;
-        }
-
-        @media(max-width: 666px) {
-            display: none;
-        }    
+        }  
     }
 
 `

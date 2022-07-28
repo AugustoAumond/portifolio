@@ -37,7 +37,7 @@ export default MainProjects;
 
 const DivProjects = styled.div`
 display: flex;
-top: 50px;
+top: 15px;
 position: relative;
 align-items: center;
 text-align: center;
