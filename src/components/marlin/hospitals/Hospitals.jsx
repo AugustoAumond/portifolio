@@ -6,7 +6,7 @@ import {useMediaQuery} from 'react-responsive';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faAngleDown, faAngleUp, faLocationDot, faPhone} from '@fortawesome/free-solid-svg-icons';
 
-import {OpenDiv, threeHospitals, hospitaisEmDestaque, ConfigHosp} from './Hospitals.action';
+import {OpenDiv, threeHospitals, ConfigHosp} from './Hospitals.action';
 import KnowMore from './../know_more/Knowmore';
 
 function Hospitais (props) {
@@ -32,6 +32,11 @@ function Hospitais (props) {
         }
         <KnowMore open={open}/>
     }
+
+    const hospitaisEmDestaque = [{
+        name: 'Hospital Vitória Barra', foto:`${process.env.PUBLIC_URL}/img/marlin/grupo de máscara 2.png`}, 
+        {name: 'Hospital Perinatal Laranjeiras', foto:`${process.env.PUBLIC_URL}/img/marlin/grupo de máscara 7.png`},
+        {name: 'Hospital Copa D Or', foto: `${process.env.PUBLIC_URL}/img/marlin/grupo de máscara 6.png`}]   
 
     return (
         <Hospitals id='div'>
