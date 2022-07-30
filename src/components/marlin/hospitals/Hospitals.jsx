@@ -47,7 +47,7 @@ function Hospitais (props) {
                 <div id='align'>
                 {hospitaisEmDestaque.map((list, index)=>(
                     <FlexColumn key={index} open={open} index={index} >
-                        <img alt='' src={list.foto}></img>  
+                        <img alt='' src={index === 0 ? `${process.env.PUBLIC_URL}/img/marlin/grupo de máscara 2.png` : `${process.env.PUBLIC_URL}/img/marlin/grupo de máscara 7.png`} ></img>  
                         <div id='organize' onClick={(()=> openWindow())}>
                         {list.name}
                             <IconArrown id='angle' index={index} icon={open ? faAngleDown : faAngleUp}/>
