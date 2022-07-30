@@ -20,6 +20,6 @@ export const threeHospitals = (list) => {
 
 //Hospitais destaque;
 export const hospitaisEmDestaque = [{
-    name: 'Hospital Vitória Barra', foto:`${process.env.PUBLIC_URL}/img/marlin/grupo de máscara 2.png`}, 
+    name: 'Hospital Vitória Barra', foto:`${process.env.PUBLIC_URL}/img/marlin/Grupo_de_mascara_2.png`}, 
     {name: 'Hospital Perinatal Laranjeiras', foto:`${process.env.PUBLIC_URL}/img/marlin/grupo de máscara 7.png`},
     {name: 'Hospital Copa D Or', foto: `${process.env.PUBLIC_URL}/img/marlin/grupo de máscara 6.png`}]   

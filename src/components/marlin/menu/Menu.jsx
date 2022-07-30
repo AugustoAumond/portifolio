@@ -32,7 +32,7 @@ export default Menu;
 const Options = styled.div`
     position: fixed;
     height: 94px;
-    width: 95%;
+    width: 99%;
     z-index: 2;
 
     @media(max-width: 666px){  
