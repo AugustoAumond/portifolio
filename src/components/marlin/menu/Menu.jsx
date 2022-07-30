@@ -4,23 +4,25 @@ import { FaBars } from 'react-icons/fa';
 
 function Menu () {
     return (
-    <Options id='options'>      
-        <div id='divNort'>
-            <img id='norte' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/norte_sul.png`}/>
-            <img id='porto' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/porto_seguro.png`} />
-        </div> 
+    <Options id='options'>   
+        <div id='centralize'>  
+            <div id='divNort'>
+                <img id='norte' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/norte_sul.png`}/>
+                <img id='porto' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/porto_seguro.png`} />
+            </div> 
 
-        <div id="divbars">
-            <FaBars id='bars'/>
-        </div>
-      
-        <ul class='list'>     
-            <li >Sobre</li>
-            <li > Hospitais </li>
-            <li > Beneficios</li>
-            <li id='especial'>Serviços Especiais</li>
-            <li >Contato</li>
-        </ul>
+            <div id="divbars">
+                <FaBars id='bars'/>
+            </div>
+        
+            <ul class='list'>     
+                <li >Sobre</li>
+                <li > Hospitais </li>
+                <li > Beneficios</li>
+                <li id='especial'>Serviços Especiais</li>
+                <li >Contato</li>
+            </ul>
+        </div> 
     </Options>
     )
 }
@@ -29,20 +31,30 @@ export default Menu;
 
 const Options = styled.div`
     position: fixed;
-    display: flex;
-    z-index: 2;
-    background: white;
     height: 94px;
-    width: 99%;
-    max-width: 1366px;
-    justify-content: space-between;
-    align-itens: center;
+    width: 95%;
+    z-index: 2;
 
     @media(max-width: 666px){  
         position: relative;
-        max-width: 350px;
+        align-items: center;
         height: 61px;
+        top: 18px;
+    }
+
+    #centralize {
+        position: relative;
+        display: flex;
+        background: white;
+        max-width: 1450px;
+        justify-content: space-around;
+        align-items: center;
         margin: 0 auto;
+
+        @media(max-width: 666px){  
+            min-width: 375px;
+            margin: 0 auto;
+        }
     }
 
     #divNort {

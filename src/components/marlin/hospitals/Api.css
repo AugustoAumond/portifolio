@@ -6,7 +6,7 @@
  }
  
  .open {
-    display: flex;   
+    display: flex;     
  }
 
  .img {
@@ -22,9 +22,7 @@
     width: 100%;
     min-width: 300px;
     margin: 35px;
-    font-family: 'Open Sans', sans-serif;
-
-    
+    font-family: 'Open Sans', sans-serif;   
  }
 
  .contacts {
@@ -41,3 +39,34 @@
         width: 100%;
         margin-bottom: 15px;;
     }
+
+   @media (max-width:666px) {
+      .open {
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .img {
+         max-width: 375px;
+         min-width: 200px;
+         margin: 0 auto;
+      }
+
+      .detail {
+         max-width: 375px;
+         min-width: 200px;
+         margin: 0 auto;
+      }
+
+      .align {
+         min-width: 375px;
+     }
+
+      .contacts {
+         max-width: 375px;
+         min-width: 200px;
+         margin:initial;
+         margin-top: 20px;
+      }
+   }

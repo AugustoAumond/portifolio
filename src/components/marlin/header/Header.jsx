@@ -36,13 +36,17 @@ const Head = styled.div`
   margin: 0 auto;
 
   @media(max-width: 666px){
-    width: 375px;
+    min-width: 375px;
   }
 
   #img {
     width: 100%;
     max-width: 1450px;
     height: 768px;
+  }
+
+  @media (max-width: 666px){
+    max-width: 430px;
   }
 
     #text{

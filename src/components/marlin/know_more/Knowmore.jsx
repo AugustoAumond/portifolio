@@ -39,28 +39,53 @@ function KnowMore(props) {
         <Know>
             <h2 id="text"> Quer saber mais? </h2>
             <div id='line'></div>
-            <img id='call' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/phone-call.png`}/>
-            <p id='textcall'> Ainda sobrou alguma dúvida sobre qual o melhor Plano para sua empresa? Envie seus dados e deixe que a NS Benefícios entrará em contato assim que possível. </p>
-            <p id='namemarlin'> <strong>NOME:</strong> </p>
-            <input id='inputname' placeholder='Insira aqui seu nome' onChange={((e)=> setName(e.currentTarget.value))} value={name} />
-            <p id='phone'> <strong>TELEFONE:</strong></p>
-            <input id='inputphone' type='number' placeholder='Insira aqui seu telefone' onChange={((e)=> setPhone(e.currentTarget.value))} value={phone}/>
-            <p id='emailmarlin'> <strong> E-MAIL:</strong></p>
-            <input id='inputemail' placeholder='Insira aqui seu e-mail' onChange={((e)=> setEmail(e.currentTarget.value))} value={email}/>             
-            <div id='recaptcha'>
-            <ReCAPTCHA 
-                ref={captcha}
-               sitekey="6LfROsgeAAAAAFX7L0voYgJBApHdcsHP-ynHpjob"
-               onChange={onRecaptcha}
-               /> 
-            </div> 
-            <button id='contact' onClick={(() =>onChange())}> <p id='contacttxt'> ENVIAR CONTATO </p></button> 
-            <p id='talkus'> FALE CONOSCO AGORA MESMO</p> 
-            <p id='number'> 4020-6440 </p>  
-            <button id='whatsapp'> <FaWhatsapp id='iconwhats'/>
-            <p id='whatstxt'> CLIQUE AQUI PARA ENVIAR UMA MENSAGEM </p></button> 
-            <button id='callus'><IconPhone id='iconphone' icon={faPhone}/> <p id='callustxt'>CLIQUE AQUI PARA LIGAR</p></button>
-            <p id='operation'> Horário de Atendimento de 8h às 17h </p> 
+
+            <DivCall>
+                <img id='call' alt='' src={`${process.env.PUBLIC_URL}/img/marlin/phone-call.png`}/>
+                <p id='textcall'> Ainda sobrou alguma dúvida sobre qual o melhor Plano para sua empresa? Envie seus dados e deixe que a NS Benefícios entrará em contato assim que possível. </p>
+            </DivCall>
+            
+            
+            <DivRegister>
+                <Inputs>
+                    <div class='inputs'>
+                        <p class='marlin'> <strong> NOME: </strong> </p>
+                        <input class='inputmarlin' placeholder='Insira aqui seu nome' onChange={((e)=> setName(e.currentTarget.value))} value={name} />
+                    </div>
+                    
+                    <div class='inputs'>
+                       <p class='marlin'> <strong>TELEFONE:</strong></p>
+                        <input class='inputmarlin' type='number' placeholder='Insira aqui seu telefone' onChange={((e)=> setPhone(e.currentTarget.value))} value={phone}/> 
+                    </div>
+                    
+                    <div class='inputs'>
+                       <p class='marlin'> <strong> E-MAIL:</strong></p>
+                        <input class='inputmarlin' placeholder='Insira aqui seu e-mail' onChange={((e)=> setEmail(e.currentTarget.value))} value={email}/>    
+                    </div>
+                         
+                    <div id='recaptcha'>
+                        <ReCAPTCHA 
+                            ref={captcha}
+                            sitekey="6LfROsgeAAAAAFX7L0voYgJBApHdcsHP-ynHpjob"
+                            onChange={onRecaptcha}
+                        /> 
+                    </div> 
+
+                    <div id='divContact'>
+                        <button id='contact' onClick={(() =>onChange())}> <p id='contacttxt'> ENVIAR CONTATO </p></button>  
+                    </div>
+                                 
+                </Inputs>
+
+                <TalkUs>
+                    <p id='talkus'> FALE CONOSCO AGORA MESMO</p> 
+                    <p id='number'> 4020-6440 </p>  
+                    <button id='MarlinContacts'> <FaWhatsapp id='iconMarlinContacts'/>
+                    CLIQUE AQUI PARA ENVIAR UMA MENSAGEM </button> 
+                    <button id='MarlinContacts'><IconPhone id='iconMarlinContacts' icon={faPhone}/> CLIQUE AQUI PARA LIGAR </button>
+                    <p id='operation'> Horário de Atendimento de 8h às 17h </p>
+                </TalkUs>
+            </DivRegister>
         </Know>
     )
 }
@@ -68,95 +93,110 @@ export default KnowMore;
 
 const Know = styled.div`
     position: relative;
-    top: 1px;
     width: 100%;
-    top: -400px;
     margin: 0 auto;
 
     @media(max-width: 666px){
-        width: 380px;
-        top: 110px;
+        min-width: 375px;
     }
 
     #text {
-        position: relative;
-        top: 10px;
-        left: 103px;
-        width: 251px;
+        margin-top: 25px;
+        margin-left: 103px;
+        max-width: 280px;
         height: 39px;
         text-align: left;
         font: normal normal bold 29px/39px Open Sans;
         color: #171717;
 
         @media(max-width: 666px){
-            top: 1px;
-            left: 18px;
-            width: 191px;
+            margin-left: 18px;
+            max-width: 255px;
             height: 30px;
-            text-align: left;
-            font: normal normal bold 22px/30px Open Sans;
-            letter-spacing: 0px;
-            color: #171717;
+            font: 22px/30px;
         }
     }
 
     #line{
-        position: relative;       
-        top: -6px;
-        left: 103px;
+        margin-top: -20px;
         border-bottom: solid 2px #F7B53D;
-        width: 171px;
+        max-width: 171px;
+        margin-left: 103px;
 
         @media(max-width: 666px){
-            top: -40px;
-            left: 18px;
-            width: 150px;
+            margin-top: -40px;
+            margin-left: 18px;
+            max-width: 150px;
             height: 30px;
         }
     }
+`
 
-    #call{
-        position: relative;
-        left: 103px;
-        top: 50px;
-        width: 138px;
-        height: 138px;
+const DivCall = styled.section`
+display: flex;
+align-items: center;
+width: 100%;
 
-        @media(max-width: 666px){
-            left: 24px;
-            width: 101px;
-            height: 101px;
-            top: 12px;
-        }
+    @media (max-width: 666px){
+        flex-direction: column;
     }
-    
-    #textcall {
-        position: relative;
-        top: -108px;
-        left: 283px;
-        width: 807px;
-        height: 59px;
-        text-align: left;
-        font: normal normal normal 21px/27px Open Sans;
-        letter-spacing: 0px;
-        color: #404040;
+}
 
-        @media(max-width: 666px){
-            left: 138px;
-            width: 205px;
-            height: 120px;
-            text-align: left;
-            font: normal normal normal 15px/20px Open Sans;
-            letter-spacing: 0px;
-            color: #404040;
-        }
+#call{
+    margin-left: 103px;
+    margin-top: 50px;
+    max-width: 138px;
+    height: 138px;
+
+    @media(max-width: 666px){
+        margin-left: unset;
+        width: 100%;
+        max-width: 175px;
     }
+}
 
-    #namemarlin{
-        position: relative;
-        top: 38px;
-        left: 104px;
-        width: 61px;
+#textcall {
+    margin-left: 20px;
+    max-width: 807px;
+    height: 59px;
+    text-align: justify;
+    font: normal normal normal 21px/27px Open Sans;
+    letter-spacing: 0px;
+    color: #404040;
+
+    @media(max-width: 666px){
+        margin-left: unset;
+        margin-top: 30px;
+        width: 100%;
+        max-width: 380px;
+        height: 120px;
+        font: 15px/20px;
+    }
+}
+`
+
+const DivRegister = styled.section`
+display: flex;
+
+    @media (max-width: 666px){
+        flex-direction: column;
+    }
+`
+
+const Inputs = styled.section`
+width: 100%;
+
+.inputs {
+    margin-left: 64px;
+
+    @media (max-width: 666px){
+        margin-left: 40px;
+    }
+}
+
+    .marlin{
+        margin-top: 38px;
+        max-width: 80px;
         height: 24px;
         text-align: left;
         font: normal normal bold 21px/24px Open Sans;
@@ -164,131 +204,50 @@ const Know = styled.div`
         color: #ECC63C;
 
         @media(max-width: 666px){
-            top: -85px;
-            left: 17px;
-            width: 41px;
+            max-width: 90px;
             height: 17px;
-            text-align: left;
-            font: normal normal bold 12px/17px Open Sans;
-            letter-spacing: 0px;
-            color: #E8BB15;
+            font: 12px/17px;
         }
     }
 
-    #inputname{
-        position: relative;
-        top: 26px;
-        left: 104px;
-        width: 544px;
+    .inputmarlin{
+        width: 100%;
+        max-width: 544px;
         height: 54px;
         border: 1px solid #D0BC90;
 
         @media(max-width: 666px){
-            top: -95px;
-            left: 17px;
-            width: 315px;
-            height: 32px;
-        }
-    }
-
-    #phone{
-        position: relative;
-        top: 28px;
-        left: 104px;
-        width: 84px;
-        height: 22px;
-        text-align: left;
-        font: normal normal bold 21px/22px Open Sans;
-        letter-spacing: 0px;
-        color: #ECC63C;
-
-        @media(max-width: 666px){
-            top: -85px;
-            left: 17px;
-            width: 41px;
-            height: 17px;
-            text-align: left;
-            font: normal normal bold 12px/17px Open Sans;
-            letter-spacing: 0px;
-            color: #E8BB15;
-        }
-    }
-
-    #inputphone{
-        position: relative;
-        top: 13px;
-        left: 104px;
-        width: 544px;
-        height: 54px;
-        border: 1px solid #D0BC90;
-
-        @media(max-width: 666px){
-            top: -95px;
-            left: 17px;
-            width: 315px;
-            height: 32px;
-        }
-    }
-
-    #emailmarlin{
-        position: relative;
-        top: 14px;
-        left: 104px;
-        width: 130px;
-        height: 22px;
-        text-align: left;
-        font: normal normal bold 21px/22px Open Sans;
-        letter-spacing: 0px;
-        color: #ECC63C;
-
-        @media(max-width: 666px){
-            top: -85px;
-            left: 17px;
-            width: 85px;
-            height: 17px;
-            text-align: left;
-            font: normal normal bold 12px/17px Open Sans;
-            letter-spacing: 0px;
-            color: #E8BB15;
-        }
-    }
-
-    #inputemail {
-        position: relative;
-        top: 0px;
-        left: 104px;
-        width: 544px;
-        height: 54px;
-        border: 1px solid #D0BC90;
-
-        @media(max-width: 666px){
-            top: -95px;
-            left: 17px;
-            width: 315px;
+            margin-top: -95px;
+            max-width: 350px;
             height: 32px;
         }
     }
 
     #recaptcha{
-        position: relative;
-        top: 27px;
-        left: 328px;
-        width: 214px;
+        display: flex;
+        justify-content: center;
+        margin-left: 90px;
+        width: 100%;
+        margin-top: 30px;
         height: 63px;
 
         @media(max-width: 666px){
-            top: -80px;
-            left: 78px;
-            width: 340px;
+            margin-left: 40px;
+            max-width: 340px;
             height: 32px;
         }
     }
 
+    #divContact {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     #contact{
-        position: relative;
-        top: 65px;
-        left: 245px;
-        width: 289px;
+        max-width: 450px;
         height: 43px;
         background: #F7B53D 0% 0% no-repeat padding-box;
         box-shadow: 0px 3px 6px #00000029;
@@ -297,29 +256,32 @@ const Know = styled.div`
         cursor: pointer;
 
         @media(max-width: 666px){
-            top: -38px;
-            left: 41px;
-            width: 289px;
+            margin-top: 40px;
+            max-width: 289px;
             height: 43px;
         }
     }
-
+    
     #contacttxt{
-        position: relative;
         text-align: center;
-        width: 289px;
+        max-width: 289px;
         height: 43px;
         font: normal normal 600 19px/20px Open Sans;
         letter-spacing: 3px;
         color: #FFFFFF;
         margin-top: 11px;
     }
+`
+
+const TalkUs = styled.section`
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
 
     #talkus{
-        position: relative;
-        left: 806px;
-        top: -557px;
-        width: 300px;
+        margin-top: 100px;
+        max-width: 300px;
         height: 23px;
         text-align: center;
         font: normal normal bold 18px/23px Open Sans;
@@ -327,22 +289,13 @@ const Know = styled.div`
         color: #4B4B4B;
 
         @media(max-width: 666px){
-            top: -16px;
-            left: 46px;
-            width: 279px;
             height: 20px;
-            text-align: center;
-            font: normal normal bold 15px/20px Open Sans;
-            letter-spacing: 0px;
-            color: #4B4B4B;
+            font: 15px/20px;
         }
     }
-    
+
     #number{
-        position: relative;
-        top: -550px;
-        left: 879px;
-        width: 142px;
+        max-width: 142px;
         height: 39px;
         text-align: center;
         font: normal normal bold 29px/39px Open Sans;
@@ -350,49 +303,46 @@ const Know = styled.div`
         color: #E8BB15;
 
         @media(max-width: 666px){
-            top: -35px;
-            left: 127px;
-            width: 124px;
             height: 34px;
-            text-align: center;
-            font: normal normal bold 25px/34px Open Sans;
-            letter-spacing: 0px;
-            color: #E8BB15;
+            font: 25px/34px;
         }
     }
 
-    #whatsapp{
-        position: relative;
-        top: -543px;
-        left: 752px;
-        width: 407px;
-        height: 90px;
+    #MarlinContacts{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 92%;
+        max-width: 407px;
+        min-width: 330px;
+        height: 75px;
         background: #F7B53D 0% 0% no-repeat padding-box;
         box-shadow: 0px 3px 6px #00000029;
         border-radius: 12px;
         border: white;
+        margin: 15px;
+        font: normal normal bold 18px/22px Open Sans;
+        letter-spacing: 0px;
+        color: #ffffff;
 
         @media(max-width: 666px){
-            top: -35px;
-            left: 17px;
-            width: 340px;
-            height: 75px;
+            max-width: 340px;
             background: #F7B53D 0% 0% no-repeat padding-box;
             box-shadow: 0px 3px 6px #00000029;
             border-radius: 12px;
+            font: 15px/20px;
         }
 
-        #iconwhats {
-            width: 53px;
+        #iconMarlinContacts {
+            width: 100%;
+            max-width: 53px;
             height: 58px;
             background: #F7B53D 0% 0% no-repeat padding-box;
-            position: relative;
-            right: 121px;
             color: white;
+            margin: 15px;
 
             @media(max-width: 666px){
-                right: 97px;
-                width: 47px;
+                max-width: 47px;
                 height: 51px;
                 background: #F7B53D 0% 0% no-repeat padding-box;
                 color: white;
@@ -400,96 +350,8 @@ const Know = styled.div`
         }
     }
 
-    #whatstxt{
-        margin-top: -60px;
-        margin-left: 137px;
-        width: 240px;
-        height: 44px;
-        color: var(--unnamed-color-ffffff);
-        text-align: left;
-        font: normal normal bold 18px/22px Open Sans;
-        letter-spacing: 0px;
-        color: #ffffff;
-
-        @media(max-width: 666px){
-            top: 9px;
-            left: 127px;
-            width: 200px;
-            height: 40px;
-            text-align: left;
-            font: normal normal bold 15px/20px Open Sans;
-            letter-spacing: 0px;
-            color: #FFFFFF;
-        }
-    }
-
-    #callus{    
-        position: relative;    
-        top: -400px;
-        left: 317px;
-        width: 407px;
-        height: 90px;
-        background: #F7B53D 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        border-radius: 12px;
-        border: white;
-
-        @media(max-width: 666px){
-            top: -20px;
-            left: 17px;
-            width: 340px;
-            height: 75px;
-            background: #F7B53D 0% 0% no-repeat padding-box;
-            box-shadow: 0px 3px 6px #00000029;
-            border-radius: 12px;
-        }
-
-        #iconphone{
-            margin-top: 16px;
-            margin-left: -255px;
-            color: white;
-            width: 48px;
-            height: 48px; 
-
-            @media(max-width: 666px){
-                top: 9px;
-                margin-left: -197px;
-                right: 97px;
-                width: 40px;
-                height: 51px;
-                background: #F7B53D 0% 0% no-repeat padding-box;
-                color: white;
-            }  
-        }
-    }
-
-    #callustxt{
-        width: 247px;
-        margin-left: 127px;
-        margin-top: -56px;
-        height: 22px;
-        text-align: center;
-        font: normal normal bold 18px/22px Open Sans;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-
-        @media(max-width: 666px){
-            top: 9px;
-            left: 127px;
-            width: 186px;
-            height: 40px;
-            text-align: left;
-            font: normal normal bold 15px/20px Open Sans;
-            letter-spacing: 0px;
-            color: #FFFFFF;
-        }
-    }
-
     #operation{
-        position: relative;
-        top: -432px;
-        left: 851px;
-        width: 248px;
+        max-width: 248px;
         height: 18px;
         text-align: center;
         font: normal normal normal 13px/18px Open Sans;
@@ -497,19 +359,12 @@ const Know = styled.div`
         color: #A7A7A7;
 
         @media(max-width: 666px){
-            top: -30px;
-            left: 81px;
-            width: 214px;
+            max-width: 214px;
             height: 17px;
-            text-align: center;
-            font: normal normal normal 12px/17px Open Sans;
-            letter-spacing: 0px;
-            color: #A7A7A7;
+            font: 12px/17px ;
         }
     }
 `
 
 const IconPhone = styled(FontAwesomeIcon)`
-
-
 `
