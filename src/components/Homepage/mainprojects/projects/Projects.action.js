@@ -6,7 +6,7 @@ export const projects = [
         photo: `${process.env.PUBLIC_URL}/img/marlin/painel.png`
     },
     {
-        name: 'Tiki',
+        name: '(projeto em manutenção)',
         type:'Banner de divulgação de eventos',
         photo: `${process.env.PUBLIC_URL}/img/tiki/imagem.jpg`
     },
