@@ -25,33 +25,47 @@ function TelaDeResultados(props){
     
     return(  
         <DivColunm>
-            <Hits> <h1>{`Você acertou ${props.hit} de ${number}`}</h1> </Hits>
-            {questions.map((questions, index)=>(
-            <><Header>
-                    <h2>Categoria: {questions?.category || "Carregando..."}  </h2>
-            </Header>
-            <Progress>
-                <ProgressQuestions>
-                    {index + 1}/ {number}
-                </ProgressQuestions>
-                <Progress2>
-                </Progress2>
-            </Progress>
+            <Hits> 
+                <h1>
+                    {`Você acertou ${props.hit} de ${number}`}
+                </h1> 
+            </Hits>
+            <DivQuestions>
+                {questions.map((questions, index)=>(
+                <Border>
+                    <Header>
+                            <h2>Categoria: {questions?.category || "Carregando..."}  </h2>
+                    </Header>
 
-             <Question>
-                <h2>{questions?.question || "Carregando..."}</h2>
-            </Question>
-            <DivRadioQuestions>
-                {questions.answers.map((answer, i) => (                    
-                    <DivRadio key={i} checked={answer===questions.correct_answer}>
-                    <InputRadio type='radio' checked={answer === questions.result} />
-                    <DivAlternativa> {answer}  </DivAlternativa>
-                </DivRadio>
-                ))}
-            </DivRadioQuestions></>
-            ))}
-            
-            <ButtonNext onClick={(()=> onStart())}> Ir para página inicial </ButtonNext>
+                    <Progress>
+                        <ProgressQuestions>
+                            {index + 1}/ {number}
+                        </ProgressQuestions>
+                        <Progress2>
+                        </Progress2>
+                    </Progress>
+
+                    <Question>
+                        <h2 id="question">{questions?.question || "Carregando..."}</h2>
+                    </Question>
+
+                    <DivRadioQuestions>
+                        {questions.answers.map((answer, i) => (                    
+                            <DivRadio key={i} checked={answer===questions.correct_answer}>
+                            <InputRadio type='radio' checked={answer === questions.result} />
+                            <DivAlternativa> {answer}  </DivAlternativa>
+                        </DivRadio>
+                        ))}
+                    </DivRadioQuestions>
+                </Border>
+                    ))}
+            </DivQuestions>
+
+            <ButtonNext>
+                <button id="next" onClick={(()=> onStart())}> 
+                    Ir para página inicial 
+                </button>
+            </ButtonNext>
 
         </DivColunm>
 )};
@@ -60,72 +74,117 @@ export default TelaDeResultados;
 
 const DivColunm = styled.div`
 rowl-direction: colunm;
+width: 100%;
+background: #294232;
+color: white;
 `
 
 const Hits = styled.div`
-display: flex;
-height: 570px;
-justify-content: center;
-align-content: center;
-align-items: center;
+    display: flex;
+    width: 100%;
+    height: 370px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+`
+
+const DivQuestions = styled.div`
+    max-width: 743px;
+    min-width: 250px;
+    border-radius: 15px;
+    margin: 0 auto;
+
+        @media (max-width: 850px){
+            margin: 20px;
+        }
+`
+
+const Border = styled.div`
+    max-width: 743px;
+    min-width: 250px;
+    border: solid white;
+    border-radius: 15px;
+    height: 550px;
+    margin: 10px;
+
+        @media (max-width: 850px){
+            margin: 20px;
+        }
 `
 
 const  Header = styled.div`
 display: flex;
 justify-content: center;
+margin: 10px;
+text-align: center;
+
+    @media (max-width: 650px){
+        font-size: 14px;
+    }
 `
 
 const Progress = styled.div`
 display: flex;
-height: 65px;
+height: 100px;
 justify-content: space-between;
 align-items: center;
 margin-bottom: 9px;
 `
 
 const ProgressQuestions = styled.div`
-display: flex;
-width: 25%;
+position: relative;
+left: 80px;
+width: 300px;
 height: 12px;
-margin-left: 10%;
-margin-top: 35px;
-border-radius: 10px;
+margin: 10px;
 `
 
 const Progress2 = styled.div`
-display: flex;
+position: relative;
+top: 5px;
+right: 55px;
 width: 150px;
 height: 12px;
-margin-right: 10%;
-margin-top: 35px;
 border-radius: 10px;
 border: solid 1px;
 `
 
 const Question = styled.div`
 display: flex;
-text-align: center;
-height: 5%;
-width: 65%;
+width: 100%;
 margin-top: 25px;
-margin-left: auto;
-margin-right: auto;
 justify-content: center;
+align-items: center;
+
+    #question {
+        max-width: 500px;
+        text-align: center;
+
+        @media (max-width: 650px){
+            font-size: 16px;
+        }
+    }   
 `
 
-const DivRadioQuestions = styled.div`
-display: flex;
+const DivRadioQuestions = styled.ul`
 flex-direction: column;
 align-items: flex-start;
-margin-top: 55px;
-margin-left: 10%;
+width: 80%;
+margin: 30px;
+
+    @media (max-width: 650px){
+        font-size: 12px;
+        width: 50%;
+        margin: 5px;
+    }
 `
 
-const DivRadio = styled.div`
+const DivRadio = styled.li`
 display: flex;
-background: ${props => props.checked ? 'red' : 'white'};
-width: 95%;
+background: ${props => props.checked ?  'red' : '#294232'};
 align-items: center;
+border-radius: 15px;
+margin: 15px;
 `
 
 const InputRadio = styled.input`
@@ -139,19 +198,30 @@ cursor:pointer;
 const DivAlternativa = styled.div`
 margin-left: 10px;`
 
-const ButtonNext = styled.button`
+const ButtonNext = styled.div`
 display: flex;
+width: 85%;
 background: #294232;
-font-size: 20px;
-color: white;
-width: 90%;
-height: 45px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 50px;
-align-items: center;
-border: 2px solid black;
-box-shadow: 2px 2px 4px 2px black;
-justify-content: center;
-cursor: pointer;
+margin-top: 15px;
+padding: 15px;
+
+    #next{
+        color: #294232;
+        background: white;
+        font-weight: 700;
+        border-radius: 5px;
+        border: 2px white;
+        height: 40px;
+        width: 40%;
+        max-width: 350px;
+        min-width: 140px;
+        cursor: pointer;  
+        transition: 2s;
+        margin: 0 auto;
+    }         
+
+    #next:hover{
+        background: #32ab326e;
+        color: #32ab32;
+    }
 `

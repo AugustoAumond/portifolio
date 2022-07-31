@@ -1,9 +1,9 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 function UltimosResultados(props){
-    let [value, setValue] = useState();
+    let [i, setI] = useState();
     let [historic, setHistoric] = useState([]);
 
     //Resetando a pagina de entrada para atualizar após remover um item;
@@ -20,9 +20,11 @@ function UltimosResultados(props){
              if (Allhistoric === null){
                 Allhistoric = [currentHistoric];
                 localStorage.setItem('historic', JSON.stringify(Allhistoric));
+                document.querySelector('#remove').style.display = 'flex';
             }else {
                 Allhistoric.push(currentHistoric);
                 JSON.stringify(localStorage.setItem('historic', JSON.stringify(Allhistoric)));
+                document.querySelector('#remove').style.display = 'flex';
             }   
         } 
         setHistoric(JSON.parse(localStorage.getItem('historic')));
@@ -34,35 +36,22 @@ function UltimosResultados(props){
     const onRemove = (hist) => {
         let newHistoric = hist;
         newHistoric.forEach((e, index)=>{
-            if (value===index){
+            if (i===index){
                 newHistoric.splice(index, 1);         
                 if (newHistoric[0] === undefined){
                     localStorage.removeItem('historic');
                     document.querySelector('#remove').style.display = 'none';
                     onStart();  
                 }else {
-                    document.querySelector('#remove').style.display = 'flex';
+                    
                     setHistoric(newHistoric);  
                     JSON.stringify(localStorage.setItem('historic', JSON.stringify(historic))); 
-                    setValue();
+                    setI();
                     onStart();      
                 }
             }                                    
-        }) 
-        
+        })        
     }
-
-
-    // Mostrando na tela o histórico;
-    /*function Div (historic){
-         if (historic !== null){
-            return (
-              
-            )
-        } 
-        else 
-         return 
-    }*/
 
     //Comentário central baseado nos acertos do usuário;
     function Comments(number, hit){
@@ -77,83 +66,118 @@ function UltimosResultados(props){
                 return "Você deu azar, as perguntas eram muito dificeis mesmo."
         }else {
             return "Acontece nas melhores famílias."   
-        }
-                
+        }            
     }
 
     return (
-        <Fragment >
-        {historic !== null ?
-            historic.map((event, index) => (
-            <DivHistoric key={index}>
-                <DivCheck type='radio' name={'check'} value={index} onChange={(e)=> setValue(index)} checked={value===index}/>
-                <Comment>
-                    {Comments(event.number, event.hit)}
-                </Comment>
-                <HistoricDatas>
-                    {event.hit} / {event.number}
-                </HistoricDatas>     
-            </DivHistoric> 
+        <DivLastResults>
+            <ul>
+            {historic !== null ?     
+            historic?.map((event, index) => (
+                <DivHistoric key={index}>
+                    <DivCheck type='radio' name={'check'} changecolor={i} value={index} onClick={(e)=> setI(index)} checked={i===index}/>
+                    <Comment>
+                        {Comments(event.number, event.hit)}
+                    </Comment>
+                    <HistoricDatas>
+                        {event.hit} / {event.number}
+                    </HistoricDatas>     
+                </DivHistoric> 
             ))
+            
              : 
-            <NoResult> <h2>Não há histórico disponível no momento</h2> </NoResult>} 
-            <Remove id="remove"  onClick={(()=> onRemove(historic))}> Remover </Remove>
-        </Fragment>       
+            <NoResult> 
+                <h2>
+                    Não há histórico disponível no momento
+                </h2> 
+            </NoResult>
+            }
+            </ul>
+            <div id="endButton">
+                <button id="remove"  onClick={(()=> onRemove(historic))}> 
+                    Remover 
+                </button>
+            </div>   
+        </DivLastResults>       
     )
 }
     
 export default UltimosResultados;
 
-const DivHistoric = styled.div`
+const DivLastResults = styled.div`
+width: 100%;
+max-width: 1375px;
 display: flex;
-background: #294232;
-border: solid;
-height: 75px;
-text-align: center;
-width: 900px;
-position: relative;
-top: 55px;
-left: -75px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+#endButton {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+    #remove {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        color: gray;
+        font-weight: 700;
+        background: white;
+        border: solid 1px;
+        border-radius: 5px;
+        height: 40px;
+        width: 20%;
+        max-width: 150px;
+        cursor: pointer;
+        transition: 2s;
+    }
+
+    #remove:hover {      
+        background: gray;
+        color: white;   
+    }
+
+    ul {
+        width: 80%;
+    }
+`
+
+const DivHistoric = styled.li`
+    display: flex;
+    background: ${props => props.changecolor  ? '#294232' : '#32ab32'};
+    border: solid 2px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 10px;
 `
 
 const DivCheck = styled.input`
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 `
 
 const Comment = styled.div`
-display: flex;
-width: 75%;
-align-items: center;
-justify-content: center;
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
 `
 
 const HistoricDatas = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-`
-
-const Remove = styled.button`
-color: white;
-background: gray;
-width: 120px;
-height: 25px;
-box-shadow: 3px 2px 5px 2px grey;
-align-items: center;
-justify-content: center;
-align-content: center;
-border: solid 1px;
-cursor: pointer;
-left: 710px;
-position: relative;
-top: 90px;
-display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 const NoResult = styled.div`
-position: relative;
-top: 110px;
-left: 150px;
+    margin: 30px;
+    text-align: center;
 `

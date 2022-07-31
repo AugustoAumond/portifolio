@@ -26,17 +26,17 @@ const DivHeader = styled.div`
 `
 
 const DivTitulo = styled.div`
-display: flex;
-justify-content: flex-start;
-max-width: 400px;
-height: 55px;
-margin: 7px;
-color: white;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 400px;
+    height: 55px;
+    margin: 25px;
+    color: white;
 `
 
 const DivDescription = styled.div`
 display: flex;
 max-width: 600px;
 color: white;
-margin-left: 5px;
+margin: 20px;
 `

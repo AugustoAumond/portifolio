@@ -36,9 +36,9 @@ function InputQuestion(){
                     onClick={() => onQuestions(counter)}> 
                     Start 
                 </button>
-                <BTNCancel id='cancel' onClick={(()=> cancel())}> 
+                <button id='btncancel' onClick={(()=> cancel())}> 
                     Cancel 
-                </BTNCancel>
+                </button>
             </DivButtons>
         </NumberQuestions>
     )
@@ -50,6 +50,7 @@ flex-direction: column;
 background: white;
 color: black;
 max-width: 1350px;
+width: 90%;
 height: 210px;
 margin: auto;
 border-radius: 26px;
@@ -72,7 +73,7 @@ margin: 15px;
 `
 
 const DivInput = styled.div`
-width: 100%;
+width: 90%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -84,7 +85,7 @@ color: #294232;
 
 const InputQuestions = styled.input`
 max-width: 700px;
-width: 30%;
+width: 40%;
 height: 8px;
 padding: 15px;
 border-radius: 5px;
@@ -97,30 +98,42 @@ justify-content: space-evenly;
 margin-top: 15px;
 
     #btnstart {
-    background: #294232;
-    color: white;
-    border: solid 1px;
-    border-radius: 5px;
-    height: 40px;
-    width: 90%;
-    max-width: 350px;
-    cursor: pointer;  
-    transition: 2s;  
-    
-        #btnstart:hover{
-            background: #32ab326e;
-            color: #294232;
-        }
+        background: #294232;
+        color: white;
+        font-weight: 700;
+        border: solid 1px;
+        border-radius: 5px;
+        height: 40px;
+        width: 40%;
+        max-width: 350px;
+        cursor: pointer;  
+        transition: 2s;         
+    }
+
+    #btnstart:hover{
+        background: #32ab326e;
+        color: #294232;
     }
 }   
+
+    #btncancel {
+        color: gray;
+        font-weight: 700;
+        border: solid 1px;
+        border-radius: 5px;
+        height: 40px;
+        width: 40%;
+        max-width: 350px;
+        cursor: pointer;
+        transition: 2s;
+    }
+
+    #btncancel:hover {      
+        background: gray;
+        color: white;
+        
+    }
+
+
 `
 
-const BTNCancel = styled.button`
-color: gray;
-border: solid 1px;
-border-radius: 5px;
-height: 40px;
-width: 90%;
-max-width: 350px;
-cursor: pointer;
-`

@@ -2,10 +2,9 @@ import React from "react";
 import styled from 'styled-components';
 import {useHistory} from 'react-router-dom';
 
-import UltimosResultados from "../ultimos_resultados/UltimosResultados";
-
 import Header from "./header/Header";
 import InputQuestions from "./input_questions/Input_Questions";
+import TabelResults from "./tabel_results/Tabel_Results";
 
 function Start(){ 
     let history = useHistory();
@@ -21,11 +20,14 @@ function Start(){
 
             <InputQuestions/>
             
-            <TabelResults>
-                <h2 id="lastresult"> Seus últimos resultados </h2>
-                <UltimosResultados />
-            </TabelResults>
-            <ButtonBack onClick={(()=> Back())}> Voltar para página inicial</ButtonBack>
+            <TabelResults/>
+
+            <div id="centralize">
+                <button id="back" onClick={(()=> Back())}> 
+                    Voltar para página inicial
+                </button>
+            </div>
+            
         </DivStart>
     )
 }
@@ -33,25 +35,36 @@ function Start(){
 export default Start;
 
 const DivStart = styled.div`
-max-width: 1375px;`
+max-width: 1375px;
+min-width: 375px;
+height: 100vh;
+background: #294232;
 
-const TabelResults = styled.div`  
+    #centralize{
+        positon: relative;
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: #294232;
+    }
 
-    #lastresult{       
-
+    #back {
+        position: unset;
+        height: 50px;
+        max-width: 250px;
+        border-radius: 15px;
+        background: white;
+        border: solid 1px white;
+        font-size: 20px;
+        color: #294232;
+        font-weight: 700;
+        cursor: pointer;
+        margin: 0 auto;
     }
 `
 
-const ButtonBack = styled.button`
-height: 50px;
-width: 250px;
-position: absolute;
-top: 786px;
-left: 570px;
-border-radius: 15px;
-background: #294232;
-border: 1px white;
-font-size: 20px;
-color: white;
-cursor: pointer;
-`
+
+
+
