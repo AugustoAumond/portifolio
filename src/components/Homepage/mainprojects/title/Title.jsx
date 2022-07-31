@@ -12,8 +12,7 @@ export default Title;
 const DivTitle = styled.div`
 color: white;
 text-align: center;
-position: relative;
-top: 25px;
+margin: 30px;
 
 
     h1 {

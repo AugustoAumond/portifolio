@@ -41,7 +41,6 @@ const His = styled.div`
     margin: 0 auto;
     width: 90%;
     max-width: 800px;
-    color: white;
     margin-bottom: 80px;
 
     h2 {   

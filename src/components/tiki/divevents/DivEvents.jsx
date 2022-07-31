@@ -211,8 +211,9 @@ function DivEvents () {
             {FourItens(index).map((list, index)=>(
             list.foto !== '' ?
                 <div key={index} id={`events${index}`} onMouseOver={(()=> ChangeCard (index))} onMouseOut={(()=> UnchangeCard (index) )}>
-                <img id={`card${index}`} src={list.foto} alt="" />
-                <p id={`date${index}`}> {list.date}</p></div> 
+                    <img id={`card${index}`} src={list.foto} alt="" />
+                    <p id={`date${index}`}> {list.date}</p>
+                </div> 
                     :
                 <div key={index} id={`events${index}`} onMouseOver={(()=> ChangeCard (index))} onMouseOut={(()=> UnchangeCard (index))} >
                 <div id={`card${index}`} alt="" >

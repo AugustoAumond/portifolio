@@ -43,9 +43,18 @@ display: flex;
         height: 40px;
         width: 40px;
         color: white;
-    }
+        animation: transition 3s;
 
+       @keyframes transition{
+        from {
+            color: #ffffff00
+        };
 
+        to {
+            color: white
+        };
+    } 
+}
 `
 
 
