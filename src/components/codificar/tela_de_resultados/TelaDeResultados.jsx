@@ -180,30 +180,32 @@ margin: 30px;
 `
 
 const DivRadio = styled.li`
-display: flex;
-background: ${props => props.checked ?  'red' : '#294232'};
-align-items: center;
-border-radius: 15px;
-margin: 15px;
+    display: flex;
+    background: ${props => props.checked ?  'red' : '#294232'};
+    align-items: center;
+    border-radius: 15px;
+    margin: 15px;
 `
 
 const InputRadio = styled.input`
-display: flex;
-height: 30px;
-margin-left: 5px;
-border: solid 1px;
-cursor:pointer;
+    display: flex;
+    height: 30px;
+    margin-left: 5px;
+    border: solid 1px;
+    cursor:pointer;
 `
 
 const DivAlternativa = styled.div`
-margin-left: 10px;`
+    margin-left: 10px;
+`
 
 const ButtonNext = styled.div`
-display: flex;
-width: 85%;
-background: #294232;
-margin-top: 15px;
-padding: 15px;
+    display: flex;
+    margin: 0 auto;
+    width: 85%;
+    background: #294232;
+    margin-top: 15px;
+    padding: 25px;
 
     #next{
         color: #294232;

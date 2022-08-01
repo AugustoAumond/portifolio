@@ -22,8 +22,5 @@ export function Validator(name, phone, email, captchaValid){
     }else if (email.indexOf('@') === -1){
         window.alert('Digite um email valido');  
         return false;       
-    }else if (captchaValid === false) {
-        window.alert('Aceite o recaptcha para continuar')
-        return false;
     }else return true;   
 }

@@ -54,7 +54,7 @@ background: #294232;
         position: unset;
         height: 50px;
         max-width: 250px;
-        border-radius: 15px;
+        border-radius: 10px;
         background: white;
         border: solid 1px white;
         font-size: 20px;
@@ -62,6 +62,11 @@ background: #294232;
         font-weight: 700;
         cursor: pointer;
         margin: 0 auto;
+
+        @media (max-width: 600px){
+            height: 35px;
+            font-size: 16px;
+        }
     }
 `
 

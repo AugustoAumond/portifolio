@@ -26,17 +26,31 @@ const DivHeader = styled.div`
 `
 
 const DivTitulo = styled.div`
+    position: relative;
+    top: 25px;
     display: flex;
     justify-content: flex-start;
     max-width: 400px;
     height: 55px;
-    margin: 25px;
+    margin-left: 25px;
     color: white;
+
+    @media (max-width: 600px){
+        h1 {
+            font-size: 24px;
+        }
+    }
 `
 
 const DivDescription = styled.div`
-display: flex;
-max-width: 600px;
-color: white;
-margin: 20px;
+    display: flex;
+    max-width: 600px;
+    color: white;
+    margin: 20px;
+
+    @media (max-width: 600px){
+        h3 {
+            font-size: 16px;
+        }
+    }
 `

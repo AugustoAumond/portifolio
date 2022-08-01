@@ -70,26 +70,40 @@ margin: 15px;
     #title{
         color: #294232;
     }
+
+    @media (max-width: 600px){
+        #title {
+            font-size: 16px;
+        }
+    }
 `
 
 const DivInput = styled.div`
-width: 90%;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-left: 20px;
-font-size: 16px;
-margin: 15px;
-color: #294232;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 16px;
+    margin: 15px;
+    color: #294232;
+
+    @media (max-width: 600px){
+        font-size: 14px;  
+    }
 `
 
 const InputQuestions = styled.input`
-max-width: 700px;
-width: 40%;
-height: 8px;
-padding: 15px;
-border-radius: 5px;
-margin-left: 10px;
+    max-width: 700px;
+    width: 40%;
+    height: 8px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+
+    @media (max-width: 600px){
+        height: 1px;
+    }
 `
 
 const DivButtons = styled.div`
@@ -107,7 +121,11 @@ margin-top: 15px;
         width: 40%;
         max-width: 350px;
         cursor: pointer;  
-        transition: 2s;         
+        transition: 2s; 
+        
+        @media (max-width: 600px){
+            height: 32px;
+        }
     }
 
     #btnstart:hover{
@@ -126,6 +144,10 @@ margin-top: 15px;
         max-width: 350px;
         cursor: pointer;
         transition: 2s;
+
+        @media (max-width: 600px){
+            height: 32px;
+        }
     }
 
     #btncancel:hover {      

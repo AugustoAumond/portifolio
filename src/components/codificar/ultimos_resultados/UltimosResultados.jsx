@@ -141,7 +141,7 @@ align-items: center;
     }
 
     ul {
-        width: 80%;
+        width: 100%;
     }
 `
 
@@ -152,9 +152,10 @@ const DivHistoric = styled.li`
     height: 40px;
     border-radius: 10px;
     text-align: center;
-    width: 100%;
-    max-width: 900px;
-    margin: 10px;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 550px;
+    margin-bottom: 10px;
 `
 
 const DivCheck = styled.input`
