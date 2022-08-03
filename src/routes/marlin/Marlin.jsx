@@ -54,7 +54,7 @@ export default Marlin;
 const DivBody = styled.div`
   width: 100%;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
 
   @media (max-width: 1366px){
@@ -66,7 +66,7 @@ const DivBody = styled.div`
   }
 
   #align {
-    width: 100%;
+    width: 98%;
     display: flex;
     justify-content: center;
     align-items:center;

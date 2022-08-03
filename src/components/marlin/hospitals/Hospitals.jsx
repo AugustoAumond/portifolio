@@ -95,7 +95,7 @@ export default Hospitais;
 
 const Hospitals = styled.div`
 position: relative;
-width: 100%;
+width: 98%;
 max-width: 1450px;
 margin: 0 auto;
 
