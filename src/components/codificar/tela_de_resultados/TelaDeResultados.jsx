@@ -202,7 +202,7 @@ const DivAlternativa = styled.div`
 const ButtonNext = styled.div`
     display: flex;
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
     background: #294232;
     margin-top: 15px;
     padding: 25px;

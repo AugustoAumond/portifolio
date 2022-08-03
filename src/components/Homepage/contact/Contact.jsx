@@ -30,27 +30,25 @@ width: 100%;
 margin: 0 auto;
 background: linear-gradient(180deg, #080325, gray);
 color: white;
-animation: transition 4s;
+
  
-
-@keyframes transition{
-        from {
-            color: #ffffff00;
-            width: 40%;
-        };
-        to {
-            color: white;
-            width: 100%;
-        };
-    }
-
     #flex{
         display: flex;
         width: 100%;
         justify-content: space-around;
         align-items: center;
+        animation: transition 4s;
 
-
+        @keyframes transition{
+            from {
+                color: #ffffff00;
+                width: 20%;
+            };
+            to {
+                color: white;
+                width: 100%;
+            };
+        }
     }
 
    

@@ -39,6 +39,23 @@ const DivProjects = styled.div`
 display: flex;
 align-items: center;
 text-align: center;
+animation: transition 6s;
+margin: 0 auto;
+
+    @keyframes transition{
+        from {
+            color: #ffffff00;
+            width: 40%;
+        };
+        to {
+            color: white;
+            width: 100%;
+        };
+    }
+
+    @media (max-width: 600px){
+        flex-direction: column;
+    }
 `
 
 const MainProject = styled.div`
@@ -53,6 +70,10 @@ flex: 1 1 200px;
         width: 90%;
         max-width: 500px;
         cursor: pointer;
+
+        @media (max-width: 600px){
+            width: 80%;
+        }
     }
     
     h3 {

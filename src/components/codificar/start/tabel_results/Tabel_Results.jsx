@@ -19,7 +19,6 @@ export default TabelResults;
 const TabelResult = styled.div` 
     background: #294232; 
     margin-top: 50px;
-    max-width: 1350px;
     width: 100%;
     color: white;
 

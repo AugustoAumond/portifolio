@@ -21,7 +21,6 @@ function Network(){
 export default Network;
 
 const DivNetwork = styled.div`
-position: relative;
 text-align: center;
 display: flex;
 
@@ -29,7 +28,6 @@ display: flex;
         width: 100%;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         align-items: center;
         list-style: none;
         padding: 10px;

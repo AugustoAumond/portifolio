@@ -20,18 +20,6 @@ width: 100%;
 position: relative;
 margin: 0 auto;
 background: linear-gradient(360deg, #080325, gray);
-animation: transition 4s;
-
-    @keyframes transition{
-        from {
-            color: #ffffff00;
-            width: 40%;
-        };
-        to {
-            color: white;
-            width: 100%;
-        };
-    }
 `
 
 

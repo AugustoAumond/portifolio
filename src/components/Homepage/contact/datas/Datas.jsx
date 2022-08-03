@@ -15,5 +15,4 @@ position: relative;
 max-width: 250px;
 margin: 15px;
 text-align: center;
-
 `

@@ -49,8 +49,7 @@ const NumberQuestions = styled.div`
 flex-direction: column;
 background: white;
 color: black;
-max-width: 1350px;
-width: 90%;
+width: 80%;
 height: 210px;
 margin: auto;
 border-radius: 26px;

@@ -35,9 +35,9 @@ function Start(){
 export default Start;
 
 const DivStart = styled.div`
-max-width: 1375px;
 min-width: 375px;
-height: 100vh;
+min-height: 100vh;
+width: 100%;
 background: #294232;
 
     #centralize{
@@ -46,8 +46,10 @@ background: #294232;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
         background: #294232;
+        padding: 30px;
     }
 
     #back {

@@ -25,6 +25,18 @@ const DivHistory = styled.div`
 position: relative;
 margin: 0 auto;
 width: 100%;
+animation: transition 10s;
+
+    @keyframes transition{
+        from {
+            color: #ffffff00;
+            width: 0%;
+        };
+        to {
+            color: white;
+            width: 100%;
+        };
+    }
 
     #fundo {
         position: relative;
