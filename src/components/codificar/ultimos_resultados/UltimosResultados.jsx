@@ -16,17 +16,21 @@ function UltimosResultados(props){
     useEffect (()=>{
         const currentHistoric = JSON.parse(localStorage.getItem('currenthistoric'));
         let Allhistoric = JSON.parse(localStorage.getItem('historic'));
-        if (!(Allhistoric !== undefined && currentHistoric === null)) {
-             if (Allhistoric === null){
+        if (currentHistoric !== null) {
+             if (Allhistoric === null || Allhistoric === undefined){
                 Allhistoric = [currentHistoric];
                 localStorage.setItem('historic', JSON.stringify(Allhistoric));
-                document.querySelector('#remove').style.display = 'flex';
             }else {
                 Allhistoric.push(currentHistoric);
                 JSON.stringify(localStorage.setItem('historic', JSON.stringify(Allhistoric)));
-                document.querySelector('#remove').style.display = 'flex';
-            }   
+            }  
+            document.querySelector('#remove').style.display = 'flex'; 
         } 
+
+        if (Allhistoric){
+            document.querySelector('#remove').style.display = 'flex'; 
+        }
+        
         setHistoric(JSON.parse(localStorage.getItem('historic')));
         localStorage.removeItem('currenthistoric');   
     }, [])
