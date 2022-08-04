@@ -25,7 +25,7 @@ const BodyBox = styled.div`
   border: solid 1px #80808085;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 `
 

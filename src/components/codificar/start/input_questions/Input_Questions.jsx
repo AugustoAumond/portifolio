@@ -120,7 +120,7 @@ margin-top: 15px;
         width: 40%;
         max-width: 350px;
         cursor: pointer;  
-        transition: 2s; 
+        transition: 0.5s; 
         
         @media (max-width: 600px){
             height: 32px;
@@ -142,7 +142,7 @@ margin-top: 15px;
         width: 40%;
         max-width: 350px;
         cursor: pointer;
-        transition: 2s;
+        transition: 0.5s;
 
         @media (max-width: 600px){
             height: 32px;

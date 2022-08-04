@@ -218,7 +218,7 @@ const ButtonNext = styled.div`
         max-width: 350px;
         min-width: 140px;
         cursor: pointer;  
-        transition: 2s;
+        transition: 0.5s;
         margin: 0 auto;
     }         
 

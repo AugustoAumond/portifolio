@@ -136,7 +136,7 @@ align-items: center;
         width: 20%;
         max-width: 150px;
         cursor: pointer;
-        transition: 2s;
+        transition: 0.5s;
     }
 
     #remove:hover {      

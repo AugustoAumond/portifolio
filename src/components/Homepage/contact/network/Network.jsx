@@ -7,12 +7,12 @@ function Network(){
     return (
         <DivNetwork>
                 <ul>  
-                    <li><a href="https://www.instagram.com/augusto_aumond/"><BsInstagram id='icons'/></a> </li>      
-                    <li><a href="https://www.linkedin.com/in/augusto-sturmer-176227207/"><BsLinkedin id='icons'/> </a> </li>
-                    <li><a href="https://github.com/AugustoAumond"><BsGithub id='icons'/> </a> </li>
-                    <li><a id='curr' href="img/Curriculo Augusto TI-convertido.pdf"><HiOutlineDocumentText id='icons'/></a> 
-                    <li><a href="mailto:augustoaumondrs@gmail.com"><HiOutlineMail id='icons'/></a>  </li></li>
-                    <li><a href="https://mywhats.net/augustoaumond"><BsWhatsapp id='icons'/></a>  </li>  
+                    <li><a target="blank" href="https://www.instagram.com/augusto_aumond/"><BsInstagram id='icons'/></a> </li>      
+                    <li><a target="blank" href="https://www.linkedin.com/in/augusto-sturmer-176227207/"><BsLinkedin id='icons'/> </a> </li>
+                    <li><a target="blank" href="https://github.com/AugustoAumond"><BsGithub id='icons'/> </a> </li>
+                    <li><a id='curr' target="blank" href="img/Curriculo Augusto TI-convertido.pdf"><HiOutlineDocumentText id='icons'/></a> 
+                    <li><a target="blank" href="mailto:augustoaumondrs@gmail.com"><HiOutlineMail id='icons'/></a>  </li></li>
+                    <li><a target="blank" href="https://mywhats.net/augustoaumond"><BsWhatsapp id='icons'/></a>  </li>  
                 </ul>  
 
         </DivNetwork>

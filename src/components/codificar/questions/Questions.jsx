@@ -273,7 +273,7 @@ margin-top: 15px;
         max-width: 350px;
         min-width: 140px;
         cursor: pointer;  
-        transition: 2s;
+        transition: 0.5s;
     }         
 
     #next:hover{

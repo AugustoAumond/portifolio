@@ -5,7 +5,7 @@ function History(){
         <DivHistory>
             <His>
                 <h2>
-                    Tragetório
+                    Trajetório
                 </h2> 
                 
                 <p>

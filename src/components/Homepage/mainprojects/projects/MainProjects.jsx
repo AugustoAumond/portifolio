@@ -10,7 +10,7 @@ function MainProjects (){
         if (index === 0){
             history.push('/marlin');
         } else if (index === 1){
-            history.push('/tiki');
+
         }else if (index === 2){
             history.push('/codificar');
         }        
@@ -68,7 +68,8 @@ flex: 1 1 200px;
 
     img {
         width: 90%;
-        max-width: 500px;
+        max-width: 350px;
+        max-height: 156px;
         cursor: pointer;
 
         @media (max-width: 600px){
