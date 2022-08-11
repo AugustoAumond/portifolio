@@ -147,7 +147,8 @@ function Questions(){
 export default Questions;
 const ExternBorder = styled.div`
 width: 100%;
-height: 100vh;
+height: 100%;
+min-height: 800px;
 background: #294232; 
 color: white;
 `
